@@ -48,8 +48,8 @@ function template (template, data) {
  * @return string
  */
 function replaceStrings (content, scope) {
-
-	var capturedStrings = content.match(/{{.*}}/g);
+console.log('[content]', content);
+	var capturedStrings = content.match(/{{[^}}]+}}/g);
 
 	//no string to be replace
 	if (capturedStrings === null) {
@@ -68,7 +68,6 @@ function replaceStrings (content, scope) {
 
 		content = content.replace(capString, value);
 	});
-
 
 	return content;
 
