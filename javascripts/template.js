@@ -10,28 +10,21 @@ function template (template, data) {
 
 	var htmlTemplate = $(template);
 
-	htmlTemplate.find('[tplRepeat]').each(function (iterationOfRepeats, repeat) {
-		var repeatElement = $(repeat),
+	htmlTemplate.find('[tplRepeat]').each(function (iterationOfRepeats, repeatItem) {
+		var repeatElement = $(repeatItem),
 			tplRepeatData = repeatElement.attr('tplRepeat'),
-			arrayRef = $.trim(tplRepeatData.replace(/.*in\s+/, '')),
-			itemRef = $.trim(tplRepeatData.replace(/(\w+).*/, '$1')),
-			frag = document.createDocumentFragment();
+			arrayRef = getArrayRef(tplRepeatData),
+			itemRef = getItemRef(tplRepeatData);
 
-		$.each(data[arrayRef], function (i, dataItem) {
+		//arrayRef is not a reference do a main scope property
+		//it is probably a loop inside a loop and should be treated inside the main one
+		if (!data[arrayRef]) {
+			return;
+		}
 
-			var content = repeatElement.html(),
-				scope = {},
-				repeatClone = $.clone(repeat);
-
-			scope[itemRef] = dataItem;
-
-			repeatClone.innerHTML = replaceStrings(content, scope);
-
-			frag.appendChild(repeatClone);
-
-		})
-
-		$(this).parent().html(frag);
+		$(this).parent().html(
+			generateLoopHtml(data, repeatItem, itemRef, arrayRef)
+		);
 
 	})
 
@@ -41,6 +34,77 @@ function template (template, data) {
 
 }
 
+
+/**
+ * Parses the loop string: <item> in <array> and return the <array> name
+ * @param  string str <item> in <array>
+ * @return string <array> name
+ */
+function getArrayRef(str) {
+	return $.trim(str.replace(/.*in\s+/, ''));
+}
+
+/**
+ * Parses the loop string: <item> in <array> and return the <item> name
+ * @param  string str <item> in <array>
+ * @return string <item>
+ */
+function getItemRef(str) {
+	return $.trim(str.replace(/(\w+).*/, '$1'));
+}
+
+
+/**
+ * generate the html that will be repeated and populates it also deals with repeaters that will use the items of the first repeater loop
+ * @param  object arrayRef reference to the data from main scope
+ * @param  [html object] repeatItem each pieace of html from the repeat loop
+ * @param  string itemRef the reference for each item of the loop from the template
+ * @return [html object] fragment
+ */
+function generateLoopHtml(data, repeatItem, itemRef, arrayRef) {
+
+	var frag = document.createDocumentFragment(),
+		dataArrayRef = getPropertyValue(data, arrayRef.split('.'));
+
+	$.each(dataArrayRef, function (i, dataItem) {
+		var content = repeatItem.innerHTML,
+			scope = {},
+			repeatClone = $.clone(repeatItem);
+
+		scope[itemRef] = dataItem;
+
+		repeatClone.innerHTML = replaceStrings(content, scope);
+
+		//in case there is a loop inside the loop and it uses the template var of the parent loop
+		var $repeatClone = $(repeatClone),
+			childNodeRepeat = $repeatClone.find('[tplRepeat]');
+			childFrag = document.createDocumentFragment();
+
+		if (childNodeRepeat.length > 0) {
+
+			var childItemRef = getItemRef(childNodeRepeat.attr('tplRepeat')),
+				childArrayRef = getArrayRef(childNodeRepeat.attr('tplRepeat'));
+
+			//if the below are the same, the child loop uses the itemRef to loop inside it
+			if (itemRef == childArrayRef.replace(/\..*/, '')) {
+				//childArrayRef don't need to have the name of the object, only the name of the properties that will be found in scope[itemRef]
+				childArrayRef = childArrayRef.replace(/[^\.]+\./, '');
+
+
+				childNodeRepeat.replaceWith(
+					generateLoopHtml(scope[itemRef], childNodeRepeat.get(0), childItemRef, childArrayRef)
+				);
+			}
+
+		}
+
+
+		frag.appendChild(repeatClone);
+	})
+
+	return frag;
+}
+
 /**
  * replace the strings inside the template
  * @param  string content the html
@@ -48,7 +112,7 @@ function template (template, data) {
  * @return string
  */
 function replaceStrings (content, scope) {
-console.log('[content]', content);
+
 	var capturedStrings = content.match(/{{[^}}]+}}/g);
 
 	//no string to be replace
@@ -64,9 +128,20 @@ console.log('[content]', content);
 					capString.indexOf(objName)
 				)
 				.match(/\.([A-z0-9]+)/) || [],
-			value = getPropertyValue(scope[objName], properties.slice(-1));
+			value;
 
-		content = content.replace(capString, value);
+		//the objName may be from another scope or loop inside the current one
+		if (!scope[objName]) {
+			return
+		}
+
+		value = getPropertyValue(scope[objName], properties.slice(-1));
+
+		//value is undefined when the objName isn't found on this scope
+		if (value) {
+			content = content.replace(capString, value);
+		}
+
 	});
 
 	return content;

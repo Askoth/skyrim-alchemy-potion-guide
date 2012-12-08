@@ -1,6 +1,11 @@
-<ul>
-    <li tplRepeat="listItem in listItems">
-        {{ listItem.name }}
-        {{ listItem.id }}
-    </li>
-</ul>
+<table>
+<tbody>
+    <tr tplRepeat="listItem in listItems">
+        <td title="{{ listItem.id }}">{{ listItem.name }}</td>
+        <td tplRepeat="effect in listItem.effects">
+    		{{ effect.name }}
+    	</td>
+        
+    </tr>
+</tbody>
+</table>

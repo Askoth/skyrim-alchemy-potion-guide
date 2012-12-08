@@ -37,19 +37,21 @@ function parseDataList (dataList) {
 					};
 
 				effect.isPositive = $td.hasClass('EffectPos');
-				effect.name = $td.find('a').map(function (k, a) {
+				effect.name;
+
+				$td.find('a').map(function (k, a) {
 					var $a = $(a);
 
 					//this anchor may be the first, second or third element
 					if (/Skyrim|skyrim/.test($a.attr('title'))) {
-						return $a.text();
+						effect.name = $a.text();
 					} else {
-						return null;
+						effect.name = null;
 					}
 
 				});
 
-				if (effect.name.length < 1) {
+				if (!effect.name) {
 					return
 				}
 
