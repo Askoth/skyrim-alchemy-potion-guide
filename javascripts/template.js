@@ -49,28 +49,28 @@ function template (template, data) {
  */
 function replaceStrings (content, scope) {
 
-	var capturedStrings = content.match(/{{.*}}/);
+	var capturedStrings = content.match(/{{.*}}/g);
 
 	//no string to be replace
 	if (capturedStrings === null) {
 		return content;
 	}
 
-	$.map(capturedStrings, function (i, capString) {
-		console.log(capString);
-		// var objName = capString.match(/\b[A-z0-9]+/)[0],
-		// 	properties = capString
-		// 		.substring(
-		// 			capString.indexOf(objName)
-		// 		)
-		// 		.match(/\.([A-z0-9]+)/) || [],
-		// 	value = getPropertyValue(scope[objName], properties.slice(-1));
+	$.each(capturedStrings, function (i, capString) {
 
-		// return content.replace(capString, value);
+		var objName = capString.match(/\b[A-z0-9]+/)[0],
+			properties = capString
+				.substring(
+					capString.indexOf(objName)
+				)
+				.match(/\.([A-z0-9]+)/) || [],
+			value = getPropertyValue(scope[objName], properties.slice(-1));
+
+		content = content.replace(capString, value);
 	});
 
 
-	return capturedStrings;
+	return content;
 
 }
 
