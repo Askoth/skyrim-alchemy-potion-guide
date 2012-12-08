@@ -2,8 +2,8 @@
 
 
 $.when(
-	$.ajax('javascripts/_templates/rawdata.html'),
-	$.ajax('javascripts/_templates/list.html')
+	$.ajax('javascripts/templates/rawdata.html'),
+	$.ajax('javascripts/templates/list.html')
 ).then(function(rawData, listTemplate){ 
 
 	var dataList = $(rawData[0]).find('tbody tr'),
