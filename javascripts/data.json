@@ -108,6 +108,10 @@
       "effects":[
          {
             "isPositive":true,
+            "name":"Resist Poison"
+         },
+         {
+            "isPositive":true,
             "name":"Fortify Light Armor"
          },
          {
@@ -159,6 +163,10 @@
          {
             "isPositive":false,
             "name":"Frenzy"
+         },
+         {
+            "isPositive":true,
+            "name":"Restore Health"
          },
          {
             "isPositive":true,
@@ -278,6 +286,10 @@
             "name":"Restore Magicka"
          },
          {
+            "isPositive":true,
+            "name":"Fortify Block"
+         },
+         {
             "isPositive":false,
             "name":"Paralysis"
          },
@@ -347,6 +359,10 @@
          {
             "isPositive":true,
             "name":"Restore Stamina"
+         },
+         {
+            "isPositive":true,
+            "name":"Cure Disease"
          },
          {
             "isPositive":true,
@@ -466,6 +482,14 @@
       "getFrom":"Harvested from Crimson Nirnroot, found in Blackreach, needed for the quest A Return To Your Roots.",
       "effects":[
          {
+            "isPositive":false,
+            "name":"Damage Health"
+         },
+         {
+            "isPositive":false,
+            "name":"Damage Stamina"
+         },
+         {
             "isPositive":true,
             "name":"Invisibility"
          },
@@ -532,6 +556,14 @@
       "image":"http://images.uesp.net/thumb/5/58/SR-icon-ingredient-Deathbell.png/48px-SR-icon-ingredient-Deathbell.png",
       "getFrom":"Harvested from Deathbell, found in Hjaalmarch.",
       "effects":[
+         {
+            "isPositive":false,
+            "name":"Damage Health"
+         },
+         {
+            "isPositive":false,
+            "name":"Ravage Stamina"
+         },
          {
             "isPositive":false,
             "name":"Slow"
@@ -602,6 +634,10 @@
          {
             "isPositive":true,
             "name":"Restore Magicka"
+         },
+         {
+            "isPositive":true,
+            "name":"Fortify Destruction"
          },
          {
             "isPositive":true,
@@ -851,6 +887,10 @@
          },
          {
             "isPositive":true,
+            "name":"Fortify Health"
+         },
+         {
+            "isPositive":true,
             "name":"Fortify Carry Weight"
          },
          {
@@ -1068,6 +1108,10 @@
       "effects":[
          {
             "isPositive":true,
+            "name":"Cure Disease"
+         },
+         {
+            "isPositive":true,
             "name":"Fortify Light Armor"
          },
          {
@@ -1140,6 +1184,10 @@
          {
             "isPositive":true,
             "name":"Restore Stamina"
+         },
+         {
+            "isPositive":true,
+            "name":"Fortify Block"
          },
          {
             "isPositive":true,
@@ -1244,6 +1292,10 @@
          {
             "isPositive":false,
             "name":"Paralysis"
+         },
+         {
+            "isPositive":true,
+            "name":"Restore Health"
          }
       ]
    },
@@ -1490,6 +1542,10 @@
          {
             "isPositive":false,
             "name":"Lingering Damage Stamina"
+         },
+         {
+            "isPositive":true,
+            "name":"Fortify Destruction"
          }
       ]
    },
@@ -1500,6 +1556,10 @@
       "image":"http://images.uesp.net/thumb/4/46/SR-icon-ingredient-Nirnroot.png/48px-SR-icon-ingredient-Nirnroot.png",
       "getFrom":"Harvested from Nirnroot, found near bodies of water throughout Skyrim.",
       "effects":[
+         {
+            "isPositive":false,
+            "name":"Damage Health"
+         },
          {
             "isPositive":false,
             "name":"Damage Stamina"
@@ -1623,6 +1683,10 @@
       "effects":[
          {
             "isPositive":false,
+            "name":"Damage Health"
+         },
+         {
+            "isPositive":false,
             "name":"Slow"
          },
          {
@@ -1717,6 +1781,10 @@
       "image":"http://images.uesp.net/thumb/2/25/SR-icon-ingredient-River_Betty.png/48px-SR-icon-ingredient-River_Betty.png",
       "getFrom":"Collected by catching River Betty fish.",
       "effects":[
+         {
+            "isPositive":false,
+            "name":"Damage Health"
+         },
          {
             "isPositive":true,
             "name":"Fortify Alteration"
@@ -2145,6 +2213,10 @@
          {
             "isPositive":false,
             "name":"Ravage Stamina"
+         },
+         {
+            "isPositive":true,
+            "name":"Resist Poison"
          },
          {
             "isPositive":true,
