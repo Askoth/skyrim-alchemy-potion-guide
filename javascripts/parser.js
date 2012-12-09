@@ -39,14 +39,13 @@ function parseDataList (dataList) {
 				effect.isPositive = $td.hasClass('EffectPos');
 				effect.name;
 
-				$td.find('a').map(function (k, a) {
+				$td.find('a').each(function (k, a) {
+
 					var $a = $(a);
 
 					//this anchor may be the first, second or third element
 					if (/Skyrim|skyrim/.test($a.attr('title'))) {
 						effect.name = $a.text();
-					} else {
-						effect.name = null;
 					}
 
 				});
