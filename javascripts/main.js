@@ -18,11 +18,14 @@ $.when(
 			output.find('.mark-text').each(function (html) {
 
 				var text = $(this).html(),
-					regexp = new RegExp('(' + markText + ')', 'gi');
+					regexp;
+				
+				$.each(markText, function (i, mark) {
 
+					regexp = new RegExp('(' + $.trim(mark) + ')', 'gi');
 
-
-				text = text.replace(regexp, '<strong>$1</strong>')
+					text = text.replace(regexp, '<strong>$1</strong>')
+				})
 
 				$(this).html(text)
 
@@ -36,21 +39,32 @@ $.when(
 	$('#search').keyup(function () {
 
 		var self = $(this),
-			matchVal = self.val(),
+			matchValues = self.val(),
 			dataCopy = $.extend({}, dataArray, true);
+
+		matchValues = matchValues.match(/[^\|]+/g);
+
 
 		dataCopy = $.map(dataCopy, function (dataItem, i) {
 
-			if (
-				indexOfValue(dataItem.name, matchVal) != -1 ||
-				indexOfValueInArray(dataItem.effects, 'name', matchVal) != -1
-			) {
-				return dataItem;
-			}
-			return null
+			var result = null;
+
+			//OR
+			$.each(matchValues, function (i, matchVal) {
+
+				if (
+					indexOfValue(dataItem.name, matchVal) != -1 ||
+					indexOfValueInArray(dataItem.effects, 'name', matchVal) != -1
+				) {
+					result = dataItem;
+				}
+
+			})
+			
+			return result;
 		});
 
-		render(dataCopy, matchVal);
+		render(dataCopy, matchValues);
 	})
 
 	function indexOfValue (str, val) {
