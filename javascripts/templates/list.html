@@ -1,6 +1,10 @@
 <table>
 <tbody>
     <tr tplRepeat="listItem in listItems">
+
+
+    	<!-- <td title="{{ listItem.id }}"><img src="{{ listItem.image }}"></td> -->
+
         <td title="{{ listItem.id }}">{{ listItem.name }}</td>
         <td tplRepeat="effect in listItem.effects">
     		{{ effect.name }}

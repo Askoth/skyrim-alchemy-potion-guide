@@ -22,7 +22,7 @@ function template (template, data) {
 			return;
 		}
 
-		$(this).parent().html(
+		$(this).replaceWith(
 			generateLoopHtml(data, repeatItem, itemRef, arrayRef)
 		);
 
