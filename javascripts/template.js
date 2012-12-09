@@ -67,13 +67,14 @@ function generateLoopHtml(data, repeatItem, itemRef, arrayRef) {
 		dataArrayRef = getPropertyValue(data, arrayRef.split('.'));
 
 	$.each(dataArrayRef, function (i, dataItem) {
-		var content = repeatItem.innerHTML,
+
+		var content = repeatItem.outerHTML,
 			scope = {},
-			repeatClone = $.clone(repeatItem);
+			repeatClone;
 
 		scope[itemRef] = dataItem;
 
-		repeatClone.innerHTML = replaceStrings(content, scope);
+		repeatClone = $.clone($(replaceStrings(content, scope)).get(0));
 
 		//in case there is a loop inside the loop and it uses the template var of the parent loop
 		var $repeatClone = $(repeatClone),
@@ -113,39 +114,89 @@ function generateLoopHtml(data, repeatItem, itemRef, arrayRef) {
  */
 function replaceStrings (content, scope) {
 
-	var capturedStrings = content.match(/{{[^}}]+}}/g);
+	var capturedStrings = content.match(/{{.*?}}/g);
 
 	//no string to be replace
 	if (capturedStrings === null) {
 		return content;
 	}
-
 	$.each(capturedStrings, function (i, capString) {
 
-		var objName = capString.match(/\b[A-z0-9]+/)[0],
-			properties = capString
-				.substring(
-					capString.indexOf(objName)
-				)
-				.match(/\.([A-z0-9]+)/) || [],
-			value;
+		//conditional
+		var conditional = capString.replace(/{{|}}/g, '').match(/{(.*)}\s*?\[(.*)\]/);
 
-		//the objName may be from another scope or loop inside the current one
-		if (!scope[objName]) {
-			return
+		if (conditional) {
+		
+			content = replaceFromConditional(conditional.slice(1), content, scope, capString) || content;
+
+		} else {
+
+			//string
+			content = replaceFromString(capString, content, scope) || content;
 		}
 
-		value = getPropertyValue(scope[objName], properties.slice(-1));
-
-		//value is undefined when the objName isn't found on this scope
-		if (value) {
-			content = content.replace(capString, value);
-		}
 
 	});
 
 	return content;
 
+}
+
+function replaceFromConditional(conditional, content, scope, capString) {
+
+	var condition = conditional[1].match(/([A-z0-9]+)([A-z0-9]+)/g),
+		conditionObj = condition[0],
+		conditionProps = condition.slice(1),
+		expressions = conditional[0].split(','),
+		value = '';
+
+	//if condition refers to this scope
+	if (scope[conditionObj]) {
+
+		var teste = getPropertyValue(scope[conditionObj], conditionProps);
+
+		$.each(expressions, function (i, exp) {
+
+			var testeStr = teste+'',
+				expSplit = exp.split(':'),
+				expKey = $.trim(expSplit[0].replace(/[\s|'|"]/g, '')),
+				expVal = $.trim(expSplit[1].replace(/[\s|'|"]/g, ''));
+
+			if (testeStr == expKey) {
+				value = expVal;
+			}
+
+		})
+
+		return content.replace(capString, value);
+
+	}
+
+	return false;
+}
+
+
+function replaceFromString(capString, content, scope) {
+	var objName = capString.match(/\b[A-z0-9]+/)[0],
+		properties = capString
+			.substring(
+				capString.indexOf(objName)
+			)
+			.match(/\.([A-z0-9]+)/) || [],
+		value;
+
+	//the objName may be from another scope, loop inside the current one or a consitional
+	if (scope[objName]) {
+
+		value = getPropertyValue(scope[objName], properties.slice(-1));
+
+		//value is undefined when the objName isn't found on this scope
+		if (value) {
+			return content.replace(capString, value);
+		}
+	}
+
+	return false;
 }
 
 /**

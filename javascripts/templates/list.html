@@ -6,7 +6,7 @@
     	<!-- <td title="{{ listItem.id }}"><img src="{{ listItem.image }}"></td> -->
 
         <td title="{{ listItem.id }}">{{ listItem.name }}</td>
-        <td tplRepeat="effect in listItem.effects">
+        <td tplRepeat="effect in listItem.effects" class="{{ {true: 'positive', false: 'negative'}[effect.isPositive] }}">
     		{{ effect.name }}
     	</td>
         
