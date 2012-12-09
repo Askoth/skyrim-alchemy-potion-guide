@@ -9,7 +9,7 @@ $.when(
 	// var dataList = $(rawData[0]).find('tbody tr'),
 	var dataList = rawData[0],
 		output = rawData,
-		dataArray = [];
+		dataArray;
 
 	// dataArray = parseDataList(dataList);
 	dataArray = rawData[0];
