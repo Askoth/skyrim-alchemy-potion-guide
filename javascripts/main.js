@@ -22,7 +22,7 @@ $.when(
 				
 				$.each(markText, function (i, mark) {
 
-					regexp = new RegExp('(' + $.trim(mark) + ')', 'gi');
+					regexp = new RegExp('(' + mark + ')', 'gi');
 
 					text = text.replace(regexp, '<strong>$1</strong>')
 				})
@@ -40,31 +40,24 @@ $.when(
 
 		var self = $(this),
 			matchValues = self.val(),
-			dataCopy = $.extend({}, dataArray, true);
+			dataCopy = $.extend({}, dataArray, true),
+			valuesToMarkOnHtml = trimArray(matchValues.match(/[^\||\&]+/g));
 
 		matchValues = matchValues.match(/[^\|]+/g);
 
+		//trim
+		matchValues = trimArray(matchValues);
 
 		dataCopy = $.map(dataCopy, function (dataItem, i) {
 
 			var result = null;
 
-			//OR
-			$.each(matchValues, function (i, matchVal) {
-
-				if (
-					indexOfValue(dataItem.name, matchVal) != -1 ||
-					indexOfValueInArray(dataItem.effects, 'name', matchVal) != -1
-				) {
-					result = dataItem;
-				}
-
-			})
+			result = searchForValue(dataItem, matchValues);
 			
 			return result;
 		});
 
-		render(dataCopy, matchValues);
+		render(dataCopy, valuesToMarkOnHtml);
 	})
 
 	function indexOfValue (str, val) {
@@ -83,6 +76,62 @@ $.when(
 		});
 
 		return index;
+	}
+
+	function trimArray (arr) {
+		return $.map(arr, function (match) {
+			return $.trim(match)
+		});
+	}
+
+	function searchForValue (dataItem, matchValues) {
+
+		var result = null;
+
+		$.each(matchValues, function (i, matchVal) {
+			if (matchVal.indexOf('&') != -1) {
+
+				result = searchAND(dataItem, matchVal);
+
+			} else {
+
+				result = searchOR(dataItem, matchVal);
+		
+			}
+
+		})
+
+		return result;
+	}
+
+
+	function searchOR (dataItem, matchVal) {
+		var result = null;
+		if (
+			indexOfValue(dataItem.name, matchVal) != -1 ||
+			indexOfValueInArray(dataItem.effects, 'name', matchVal) != -1
+		) {
+			result = dataItem;
+		}		
+		return result;
+	}
+
+	function searchAND (dataItem, matchValues) {
+		var result = dataItem,
+			matchValArr = trimArray(matchValues.match(/[^\&]+/g));
+
+		$.each(matchValArr, function (i, matchVal) {
+
+			//if matchVal cannot be found, return null
+			if (
+				indexOfValue(dataItem.name, matchVal) == -1 &&
+				indexOfValueInArray(dataItem.effects, 'name', matchVal) == -1
+			) {
+				result = null;
+			}
+		});
+
+		return result;
 	}
 
 });
