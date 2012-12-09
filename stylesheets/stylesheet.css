@@ -192,6 +192,16 @@ hr {
   background: #4B0101;
 }
 
+.text-field {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.mark-text strong {
+  color: #FFF;
+  font-size: 110%;
+}
+
 /* Buttons
 */
 
