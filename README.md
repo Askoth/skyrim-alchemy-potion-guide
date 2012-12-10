@@ -1,4 +1,4 @@
-askoth
+Skyrim Alchemy Potion Guide
 ======
 
 This is a way to search and match skyrim alchemy ingredients for specific effects.
