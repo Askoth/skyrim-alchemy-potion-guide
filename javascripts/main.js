@@ -89,6 +89,11 @@ $.when(
 		var result = null;
 
 		$.each(matchValues, function (i, matchVal) {
+
+			if (result != null) {
+				return;
+			}
+
 			if (matchVal.indexOf('&') != -1) {
 
 				result = searchAND(dataItem, matchVal);
@@ -96,7 +101,7 @@ $.when(
 			} else {
 
 				result = searchOR(dataItem, matchVal);
-		
+
 			}
 
 		})
