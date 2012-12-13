@@ -1,3 +1,17 @@
+'use strict'; 
+// shim layer with setTimeout fallback
+window.requestAnimFrame = (function(){
+	return window.requestAnimationFrame       || 
+		window.webkitRequestAnimationFrame || 
+		window.mozRequestAnimationFrame    || 
+		window.oRequestAnimationFrame      || 
+		window.msRequestAnimationFrame     || 
+		function( callback ){
+			window.setTimeout(callback, 1000 / 60);
+		};
+})();
+
+
 $.when(
 	// $.ajax('javascripts/templates/rawdata.html'),
 	$.ajax('javascripts/data.json'),
@@ -8,12 +22,39 @@ $.when(
 		dataArray = rawData[0];
 
 	// dataArray = parseDataList(dataList);
-	render(dataArray);
+	addToRenderQueue(dataArray);
 
-	function render (data, markText) {
+
+	//ANIMATION tests
+	var animRate = 10,
+		animIndex = 0;
+	window.requestAnimFrame(render);
+
+	function addToRenderQueue (data, markText) {
+		//queue allows only the last information to be rendered.
+		render.data = data;
+		render.markText = markText;
+	}
+
+	function render () {
+
+		animIndex++;
+
+		if (animIndex > animRate) {
+			animIndex = 0;
+		}
+
+		if (animIndex != 0 || render.data === null) {
+			window.requestAnimFrame(render);
+			return;
+		}
+
+		var data = render.data,
+			markText = render.markText;
+
 		output = template(listTemplate[0], {listItems: data});
 
-		if (markText && markText.length > 0) {
+		if (markText != null && markText.length > 0) {
 
 			output.find('.mark-text').each(function (html) {
 
@@ -22,9 +63,12 @@ $.when(
 				
 				$.each(markText, function (i, mark) {
 
-					regexp = new RegExp('(' + mark + ')', 'gi');
+					if (mark.length > 0) {
+						regexp = new RegExp('(' + mark + ')', 'gi');
 
-					text = text.replace(regexp, '<strong>$1</strong>')
+						text = text.replace(regexp, '<strong>$1</strong>')
+					}
+
 				})
 
 				$(this).html(text)
@@ -33,31 +77,38 @@ $.when(
 		}
 
 		$('#results').html(output);
+
+		render.data = null;
+		window.requestAnimFrame(render);
 	}
 
 
 	$('#search').keyup(function () {
-
 		var self = $(this),
 			matchValues = self.val(),
 			dataCopy = $.extend({}, dataArray, true),
+			valuesToMarkOnHtml;
+
+		if (matchValues) {
+		
 			valuesToMarkOnHtml = trimArray(matchValues.match(/[^\||\&]+/g));
 
-		matchValues = matchValues.match(/[^\|]+/g);
+			matchValues = matchValues.match(/[^\|]+/g);
 
-		//trim
-		matchValues = trimArray(matchValues);
+			//trim
+			matchValues = trimArray(matchValues);
 
-		dataCopy = $.map(dataCopy, function (dataItem, i) {
+			dataCopy = $.map(dataCopy, function (dataItem, i) {
 
-			var result = null;
+				var result = null;
 
-			result = searchForValue(dataItem, matchValues);
-			
-			return result;
-		});
+				result = searchForValue(dataItem, matchValues);
+				
+				return result;
+			});
+		}
 
-		render(dataCopy, valuesToMarkOnHtml);
+		addToRenderQueue(dataCopy, valuesToMarkOnHtml);
 	})
 
 	function indexOfValue (str, val) {
@@ -126,7 +177,6 @@ $.when(
 			matchValArr = trimArray(matchValues.match(/[^\&]+/g));
 
 		$.each(matchValArr, function (i, matchVal) {
-
 			//if matchVal cannot be found, return null
 			if (
 				indexOfValue(dataItem.name, matchVal) == -1 &&
