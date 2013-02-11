@@ -2,45 +2,79 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Skyrim Alchemy Guide" />
 
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" /> -->
 
-    <title>Testing github pages by Askoth</title>
+    <title>Skyrim Alchemy Guide</title>
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Skyrim Alchemy Potion Guide</h1>
-            <h2></h2>
+<div id="container">
 
-            <section id="downloads">
-                <a href="https://github.com/Askoth/askoth/zipball/master" class="btn">Download as .zip</a>
-                <a href="https://github.com/Askoth/askoth/tarball/master" class="btn">Download as .tar.gz</a>
-                <a href="https://github.com/Askoth/askoth" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-            </section>
-        </div>
-</header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="nav-lnk">
+                    Tinha algo aqui, ne?
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-lnk">
+                    Ingredients
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-lnk">
+                    Effects
+                </a>
+            </li>
+            <li>
+                <a href="#preferences" class="nav-lnk">
+                    Preferences
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-<div class="container">
-    <section id="main_content">
-        <div id="form">
-            <input id="search" class="text-field" type="text" />
-        </div>
+    <main>
 
-        <div id="results">
-        </div>
+        <section id="controls">
+        </section>
+
+        <section id="item-list">
+        </section>
+
+        <section id="search">
+        </section>
+
+    </main>
+
+    <section id="preferences">
+        <h2>Settings</h2>
+        <ul>
+            <li>
+                <label for="settings-dawnguard">Show Dawnguard items</label>
+                <input type="checkbox" id="settings-dawnguard" />
+            </li>
+            <li>
+                <label for="settings-hearthfire">Show Hearthfire items</label>
+                <input type="checkbox" id="settings-hearthfire" />
+            </li>
+            <li>
+                <label for="settings-dragonborn">Show Dragonborn items</label>
+                <input type="checkbox" id="settings-dragonborn" />
+            </li>
+        </ul>
     </section>
+
 </div>
 
-
 <script src="javascripts/libs/jquery.js"></script>
-<script src="javascripts/parser.js"></script>
-<script src="javascripts/template.js"></script>
 <script src="javascripts/main.js"></script>
 
 </body>
