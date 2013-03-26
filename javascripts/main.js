@@ -37,12 +37,18 @@ $.when(
         $('#lists-wrap').append($(output).clone());
     }
 
-    
+
+    var click = 'click';
+
+    if (Modernizr.touch) {
+        click = 'touchstart';
+    }
+
+    $(document).on(click, '.div-button', function () {
+        $(this).toggleClass('active');
+    })
 
 });
-
-
-
 
 
 

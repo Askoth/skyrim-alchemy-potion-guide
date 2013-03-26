@@ -3,6 +3,7 @@
 
 * {
     font-family: Futura, Arial, sans-serif;
+    color: $color-white;
 }
 
 html,
@@ -39,7 +40,6 @@ button {
     cursor: pointer;
     border: 0;
     background: none;
-    color: $color-white;
     text-shadow: 0.136em 0.1em 0 $color-black;
 }
 
@@ -61,8 +61,12 @@ button {
 }
 
 .list-item {
-    margin: 20px;
+    padding: 10px 20px;
     display: block;
+
+    &:hover {
+        background-color: $color-black-bg;
+    }
 }
 
 .item {
@@ -71,20 +75,30 @@ button {
     font-size: 1.3em;
     text-align: left;
 
+    color: $color-light-gray;
+
     white-space: nowrap;
     // text-overflow: ellipsis;
     // overflow: hidden;
 
-    + .item-effects {
+    + .list-effects {
         display: none;
+        -webkit-columns: 2;
+        padding: 0.3em;
+
+        .item-effects {
+            line-height: 2em;
+            display: block;
+        }
     }
 
     &.active {
         
         font-size: 1.6em;
         white-space: normal;
+        color: $color-white;
 
-        + .item-effects {
+        + .list-effects {
             display: block;
         }
     }

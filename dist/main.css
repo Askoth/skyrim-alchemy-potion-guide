@@ -66,9 +66,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 4, ../css/main.scss */
 * {
   font-family: Futura, Arial, sans-serif;
+  color: white;
 }
 
-/* line 9, ../css/main.scss */
+/* line 10, ../css/main.scss */
 html,
 body {
   width: 100%;
@@ -76,12 +77,12 @@ body {
   overflow: hidden;
 }
 
-/* line 15, ../css/main.scss */
+/* line 16, ../css/main.scss */
 body {
   background-color: black;
 }
 
-/* line 19, ../css/main.scss */
+/* line 20, ../css/main.scss */
 #bg-wrap {
   position: fixed;
   left: 0;
@@ -89,7 +90,7 @@ body {
   z-index: -1;
 }
 
-/* line 26, ../css/main.scss */
+/* line 27, ../css/main.scss */
 #bg {
   display: block;
   margin-left: -20px;
@@ -99,13 +100,12 @@ body {
   -webkit-filter: blur(8px);
 }
 
-/* line 38, ../css/main.scss */
+/* line 39, ../css/main.scss */
 .div-button,
 button {
   cursor: pointer;
   border: 0;
   background: none;
-  color: white;
   text-shadow: 0.136em 0.1em 0 black;
 }
 
@@ -129,28 +129,41 @@ button {
 
 /* line 63, ../css/main.scss */
 .list-item {
-  margin: 20px;
+  padding: 10px 20px;
   display: block;
 }
+/* line 67, ../css/main.scss */
+.list-item:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-/* line 68, ../css/main.scss */
+/* line 72, ../css/main.scss */
 .item {
   display: block;
   width: 100%;
   font-size: 1.3em;
   text-align: left;
+  color: #cccccc;
   white-space: nowrap;
 }
-/* line 78, ../css/main.scss */
-.item + .item-effects {
+/* line 84, ../css/main.scss */
+.item + .list-effects {
   display: none;
+  -webkit-columns: 2;
+  padding: 0.3em;
 }
-/* line 82, ../css/main.scss */
+/* line 89, ../css/main.scss */
+.item + .list-effects .item-effects {
+  line-height: 2em;
+  display: block;
+}
+/* line 95, ../css/main.scss */
 .item.active {
   font-size: 1.6em;
   white-space: normal;
+  color: white;
 }
-/* line 87, ../css/main.scss */
-.item.active + .item-effects {
+/* line 101, ../css/main.scss */
+.item.active + .list-effects {
   display: block;
 }

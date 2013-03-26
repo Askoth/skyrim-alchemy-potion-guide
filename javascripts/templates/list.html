@@ -2,8 +2,8 @@
     <li tplRepeat="ingredient in ingredients" class="list-item">
 
         <div role="button" class="div-button item">{{ ingredient.name }}</div>
-        <ol class="item-effects">
-            <li tplRepeat="effect in ingredient.effects">
+        <ol class="list-effects">
+            <li tplRepeat="effect in ingredient.effects" class="item-effects">
                 <label>
                     <input type="checkbox" />
                     {{ effect }}
