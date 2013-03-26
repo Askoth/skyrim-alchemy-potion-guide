@@ -1,15 +1,22 @@
-<table>
-<tbody>
-    <tr tplRepeat="listItem in listItems">
+<ul class="list">
+    <li tplRepeat="ingredient in ingredients" class="list-item">
 
+        <div role="button" class="div-button item">{{ ingredient.name }}</div>
+        <ol class="item-effects">
+            <li tplRepeat="effect in ingredient.effects">
+                <label>
+                    <input type="checkbox" />
+                    {{ effect }}
+                </label>
+            </li>
+        </ol>
 
-    	<!-- <td title="{{ listItem.id }}"><img src="{{ listItem.image }}"></td> -->
+    	<!-- <td title="{{ listItem.id }}"><img src="{{ listItem.image }}"></td> >
 
         <td title="{{ listItem.id }}" class="mark-text">{{ listItem.name }}</td>
         <td tplRepeat="effect in listItem.effects" class="{{ {true: 'positive', false: 'negative'}[effect.isPositive] }} mark-text">
     		{{ effect.name }}
-    	</td>
+    	</td-->
         
-    </tr>
-</tbody>
-</table>
+    </li>
+</ul>

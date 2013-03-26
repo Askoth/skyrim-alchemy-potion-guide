@@ -13,181 +13,30 @@ window.requestAnimFrame = (function(){
 
 
 $.when(
-	// $.ajax('javascripts/templates/rawdata.html'),
 	$.ajax('javascripts/data.json'),
 	$.ajax('javascripts/templates/list.html')
 ).then(function(rawData, listTemplate){ 
-	// var dataList = $(rawData[0]).find('tbody tr'),
 	var output = rawData,
-		dataArray = rawData[0];
+		alchemyData = rawData[0];
 
-	// dataArray = parseDataList(dataList);
-	addToRenderQueue(dataArray);
+	// addToRenderQueue(alchemyData);
 
-
-	//ANIMATION tests
-	var animRate = 10,
-		animIndex = 0;
-	window.requestAnimFrame(render);
-
-	function addToRenderQueue (data, markText) {
-		//queue allows only the last information to be rendered.
-		render.data = data;
-		render.markText = markText;
-	}
-
-	function render () {
-
-		animIndex++;
-
-		if (animIndex > animRate) {
-			animIndex = 0;
-		}
-
-		if (animIndex != 0 || render.data === null) {
-			window.requestAnimFrame(render);
-			return;
-		}
-
-		var data = render.data,
-			markText = render.markText;
-
-		output = template(listTemplate[0], {listItems: data});
-
-		if (markText != null && markText.length > 0) {
-
-			output.find('.mark-text').each(function (html) {
-
-				var text = $(this).html(),
-					regexp;
-				
-				$.each(markText, function (i, mark) {
-
-					if (mark.length > 0) {
-						regexp = new RegExp('(' + mark + ')', 'gi');
-
-						text = text.replace(regexp, '<strong>$1</strong>')
-					}
-
-				})
-
-				$(this).html(text)
-
-			});
-		}
-
-		$('#results').html(output);
-
-		render.data = null;
-		window.requestAnimFrame(render);
-	}
+    render();
 
 
-	$('#search').keyup(function () {
-		var self = $(this),
-			matchValues = self.val(),
-			dataCopy = $.extend({}, dataArray, true),
-			valuesToMarkOnHtml;
+    function render () {
 
-		if (matchValues) {
-		
-			valuesToMarkOnHtml = trimArray(matchValues.match(/[^\||\&]+/g));
+        var output = template(listTemplate[0], {
+                ingredients: alchemyData.ingredients,
+                effects: alchemyData.effects
+            });
 
-			matchValues = matchValues.match(/[^\|]+/g);
+        console.log(alchemyData);
 
-			//trim
-			matchValues = trimArray(matchValues);
+        $('#lists-wrap').append($(output).clone());
+        $('#lists-wrap').append($(output).clone());
+    }
 
-			dataCopy = $.map(dataCopy, function (dataItem, i) {
-
-				var result = null;
-
-				result = searchForValue(dataItem, matchValues);
-				
-				return result;
-			});
-		}
-
-		addToRenderQueue(dataCopy, valuesToMarkOnHtml);
-	})
-
-	function indexOfValue (str, val) {
-		return str.toLowerCase().indexOf(val.toLowerCase());
-	}
-
-	function indexOfValueInArray (array, prop, val) {
-
-		var index = -1;
-
-		$.each(array, function (i, item) {
-			var thisIndex = indexOfValue(item[prop], val);
-			if (thisIndex != -1) {
-				index = thisIndex;
-			}
-		});
-
-		return index;
-	}
-
-	function trimArray (arr) {
-		return $.map(arr, function (match) {
-			return $.trim(match)
-		});
-	}
-
-	function searchForValue (dataItem, matchValues) {
-
-		var result = null;
-
-		$.each(matchValues, function (i, matchVal) {
-
-			if (result != null) {
-				return;
-			}
-
-			if (matchVal.indexOf('&') != -1) {
-
-				result = searchAND(dataItem, matchVal);
-
-			} else {
-
-				result = searchOR(dataItem, matchVal);
-
-			}
-
-		})
-
-		return result;
-	}
-
-
-	function searchOR (dataItem, matchVal) {
-		var result = null;
-		if (
-			indexOfValue(dataItem.name, matchVal) != -1 ||
-			indexOfValueInArray(dataItem.effects, 'name', matchVal) != -1
-		) {
-			result = dataItem;
-		}		
-		return result;
-	}
-
-	function searchAND (dataItem, matchValues) {
-		var result = dataItem,
-			matchValArr = trimArray(matchValues.match(/[^\&]+/g));
-
-		$.each(matchValArr, function (i, matchVal) {
-			//if matchVal cannot be found, return null
-			if (
-				indexOfValue(dataItem.name, matchVal) == -1 &&
-				indexOfValueInArray(dataItem.effects, 'name', matchVal) == -1
-			) {
-				result = null;
-			}
-		});
-
-		return result;
-	}
 
 });
 

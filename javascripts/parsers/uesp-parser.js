@@ -1,6 +1,6 @@
-
 /**
  * Parses the crazy html from the raw data i got
+ * http://www.uesp.net/wiki/Skyrim:Ingredients
  * @param  jQuery tr array
  * @return custom array with all the info I need
  */
