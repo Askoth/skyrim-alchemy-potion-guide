@@ -37,6 +37,7 @@ $.when(
         $('#lists-wrap').append($(output).clone());
     }
 
+    
 
 });
 
