@@ -23,8 +23,8 @@ function transformImage (img, w) {
     canvas.height = w.height;
 
     transform.crop(w.width, w.height, w.pixelRatio);
-    transform.blur(10);
-    transform.opacity(0.2);
+    transform.blur(5);
+    transform.opacity(0.6);
 
     $('body').css({
         backgroundImage: 'url(' + canvas.toDataURL() + ')'
