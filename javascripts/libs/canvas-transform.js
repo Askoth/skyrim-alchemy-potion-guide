@@ -45,13 +45,21 @@
             destWidth,
             destHeight,
 
-            operation;
+            isWindowHorizontal = false,
+            isImageHorizontal = false;
 
         //HOW TO
         //drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
-        //this conditional MUST be improved!
-        if (width > height && this.imageObj.width > width && this.imageObj.height > height) {
+        if (width > height) {
+            isWindowHorizontal = true;
+        }
+
+        if (this.imageObj.width > this.imageObj.height) {
+            isImageHorizontal = true;
+        }
+
+        if (width/height > this.imageObj.width/this.imageObj.height) {
 
             stretchRatio = ( this.imageObj.width / width );
             sourceWidth = Math.floor(this.imageObj.width);
@@ -66,11 +74,11 @@
             sourceX = Math.floor((this.imageObj.width - sourceWidth)/2);
 
         }
-        
+
         destWidth = Math.floor(width / pixelRatio);
         destHeight = Math.floor(height / pixelRatio);
 
-        this.context.drawImage(this.imageObj, sourceX, sourceY, sourceWidth, 
+        this.context.drawImage(this.imageObj, sourceX, sourceY, sourceWidth,
             sourceHeight, destX, destY, destWidth, destHeight);
 
         this.refresh();
