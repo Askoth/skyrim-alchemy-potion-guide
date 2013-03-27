@@ -17,24 +17,6 @@ body {
     background-color: $color-black;
 }
 
-#bg-wrap {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-}
-
-#bg {
-    display: block;
-    margin: {
-        left: -20px;
-        top: -20px;
-    }
-    width: 140%;
-    height: 140%;
-    -webkit-filter: blur(8px);
-}
-
 .div-button,
 button {
     cursor: pointer;

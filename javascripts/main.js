@@ -11,7 +11,6 @@ window.requestAnimFrame = (function(){
 		};
 })();
 
-
 $.when(
 	$.ajax('javascripts/data.json'),
 	$.ajax('javascripts/templates/list.html')
@@ -21,6 +20,7 @@ $.when(
 
 	// addToRenderQueue(alchemyData);
 
+    backgroundImage();
     render();
 
 
@@ -37,20 +37,14 @@ $.when(
         $('#lists-wrap').append($(output).clone());
     }
 
-
     var click = 'click';
 
     if (Modernizr.touch) {
-        click = 'touchstart';
+        click = 'touchend';
     }
 
-    $(document).on(click, '.div-button', function () {
+    $(document).on('click', '.div-button', function () {
         $(this).toggleClass('active');
-    })
+    });
 
 });
-
-
-
-
-

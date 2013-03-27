@@ -82,25 +82,7 @@ body {
   background-color: black;
 }
 
-/* line 20, ../css/main.scss */
-#bg-wrap {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-
-/* line 27, ../css/main.scss */
-#bg {
-  display: block;
-  margin-left: -20px;
-  margin-top: -20px;
-  width: 140%;
-  height: 140%;
-  -webkit-filter: blur(8px);
-}
-
-/* line 39, ../css/main.scss */
+/* line 21, ../css/main.scss */
 .div-button,
 button {
   cursor: pointer;
@@ -109,7 +91,7 @@ button {
   text-shadow: 0.136em 0.1em 0 black;
 }
 
-/* line 46, ../css/main.scss */
+/* line 28, ../css/main.scss */
 #lists-wrap {
   display: block;
   width: 100%;
@@ -118,7 +100,7 @@ button {
   position: relative;
   background: rgba(0, 0, 0, 0.4);
 }
-/* line 53, ../css/main.scss */
+/* line 35, ../css/main.scss */
 #lists-wrap ul {
   display: inline-block;
   vertical-align: top;
@@ -127,17 +109,17 @@ button {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 63, ../css/main.scss */
+/* line 45, ../css/main.scss */
 .list-item {
   padding: 10px 20px;
   display: block;
 }
-/* line 67, ../css/main.scss */
+/* line 49, ../css/main.scss */
 .list-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 72, ../css/main.scss */
+/* line 54, ../css/main.scss */
 .item {
   display: block;
   width: 100%;
@@ -146,24 +128,24 @@ button {
   color: #cccccc;
   white-space: nowrap;
 }
-/* line 84, ../css/main.scss */
+/* line 66, ../css/main.scss */
 .item + .list-effects {
   display: none;
   -webkit-columns: 2;
   padding: 0.3em;
 }
-/* line 89, ../css/main.scss */
+/* line 71, ../css/main.scss */
 .item + .list-effects .item-effects {
   line-height: 2em;
   display: block;
 }
-/* line 95, ../css/main.scss */
+/* line 77, ../css/main.scss */
 .item.active {
   font-size: 1.6em;
   white-space: normal;
   color: white;
 }
-/* line 101, ../css/main.scss */
+/* line 83, ../css/main.scss */
 .item.active + .list-effects {
   display: block;
 }
