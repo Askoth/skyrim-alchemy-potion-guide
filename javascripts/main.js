@@ -22,7 +22,7 @@ function App (rawData){
 
     console.log(alchemyData);
 
-    backgroundImage();
+    // backgroundImage();
 
     var mainView = new MainView({
             ingredientsCollection: startIngredientsCollection(alchemyData),

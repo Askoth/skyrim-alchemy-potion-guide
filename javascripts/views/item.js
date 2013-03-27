@@ -1,6 +1,8 @@
 var ItemView = Backbone.View.extend({
         initialize: function (options) {
             this.mainView = options.mainView;
+            this.ingredient = options.ingredient;
+            this.column = options.column;
 
             this.listenTo(this.mainView, 'closeAll', this.close)
         },
@@ -11,10 +13,13 @@ var ItemView = Backbone.View.extend({
         },
         openCheckboxes: function () {
             this.$el.addClass('active');
-            this.trigger('active', this);
+            this.trigger('active', {
+                el: this,
+                column: this.column
+            });
         },
-        close: function (view) {
-            if (view != this) {
+        close: function (options) {
+            if (options.el != this && options.column == this.column) {
                 this.$el.removeClass('active');
             }
         }

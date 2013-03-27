@@ -21,19 +21,29 @@ var MainView = Backbone.View.extend({
 
             $el.append($html);
 
-            _.each(collection, function (ingredient) {
+            var listsAmount = $el.find('ul').length;
 
-                var $tpl = $(subview.template({ingredient: ingredient}));
+            for (var i = 0; i < listsAmount; i++) {
 
-                $el.find('ul').append($tpl);
+                _.each(collection, function (ingredient) {
 
-                var view = new subview.view({ mainView: mainView });
+                    var $tpl = $(subview.template({ingredient: ingredient})),
+                        ulIdNum = i + 1;
 
-                view.setElement($tpl)
+                    $el.find('#ingredient-list-' + ulIdNum).append($tpl);
 
-                mainView.listenTo(view, 'active', mainView.closeAll)
+                    var view = new subview.view({
+                        mainView: mainView,
+                        ingredient: ingredient,
+                        column: ulIdNum
+                    });
 
-            });
+                    view.setElement($tpl)
+
+                    mainView.listenTo(view, 'active', mainView.closeAll)
+
+                });
+            }
 
         },
         closeAll: function (view) {
