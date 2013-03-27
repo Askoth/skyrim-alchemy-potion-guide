@@ -11,40 +11,25 @@ window.requestAnimFrame = (function(){
 		};
 })();
 
-$.when(
-	$.ajax('javascripts/data.json'),
-	$.ajax('javascripts/templates/list.html')
-).then(function(rawData, listTemplate){
-	var output = rawData,
-		alchemyData = rawData[0];
 
-	// addToRenderQueue(alchemyData);
+
+$.when(
+	$.ajax('javascripts/data.json')
+).then(App);
+
+function App (rawData){
+	var alchemyData = rawData;
+
+    console.log(alchemyData);
 
     backgroundImage();
-    render();
 
+    var mainView = new MainView({
+            ingredientsCollection: startIngredientsCollection(alchemyData),
+            effectsCollection: startEffectsCollection(alchemyData),
+        });
 
-    function render () {
+    mainView.render();
 
-        var output = template(listTemplate[0], {
-                ingredients: alchemyData.ingredients,
-                effects: alchemyData.effects
-            });
+};
 
-        console.log(alchemyData);
-
-        $('#lists-wrap').append($(output).clone());
-        $('#lists-wrap').append($(output).clone());
-    }
-
-    var click = 'click';
-
-    if (Modernizr.touch) {
-        click = 'touchend';
-    }
-
-    $(document).on('click', '.div-button', function () {
-        $(this).toggleClass('active');
-    });
-
-});

@@ -25,6 +25,29 @@
 <main id="lists-wrap">
 </main>
 
+<script type="text/template" id="tpl-item">
+    <li class="list-item">
+
+        <div role="button" class="div-button item"><%= ingredient.name %></div>
+        <ol class="list-effects">
+            <% _.each(ingredient.effects, function(effect) { %>
+                <li class="item-effects">
+                    <label>
+                        <input type="checkbox" />
+                        <%= effect %>
+                    </label>
+                </li>
+            <% }) %>
+        </ol>
+
+    </li>
+</script>
+
+<script type="text/template" id="tpl-list">
+    <ul class="list">
+    </ul>
+</script>
+
 <!--div id="settings-about">
 
     <section id="downloads">
@@ -36,9 +59,15 @@
 
 <script src="javascripts/libs/modernizr.js"></script>
 <script src="javascripts/libs/jquery.js"></script>
+<script src="javascripts/libs/lodash.min.js"></script>
+<script src="javascripts/libs/backbone.js"></script>
 <script src="javascripts/libs/canvas-transform.js"></script>
 <script src="javascripts/canvas-bg.js"></script>
-<script src="javascripts/template.js"></script>
+<script src="javascripts/models/ingredient.js"></script>
+<script src="javascripts/collections/effects.js"></script>
+<script src="javascripts/collections/ingredients.js"></script>
+<script src="javascripts/views/item.js"></script>
+<script src="javascripts/views/main.js"></script>
 <script src="javascripts/main.js"></script>
 
 </body>

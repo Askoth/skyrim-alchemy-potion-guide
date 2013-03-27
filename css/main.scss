@@ -50,6 +50,21 @@ button {
     &:hover {
         background-color: $color-black-bg;
     }
+
+    &.active {
+
+        .item {
+
+            font-size: 1.6em;
+            white-space: normal;
+            color: $color-white;
+
+            + .list-effects {
+                display: block;
+            }
+        }
+
+    }
 }
 
 .item {
@@ -71,17 +86,6 @@ button {
 
         .item-effects {
             line-height: 2em;
-            display: block;
-        }
-    }
-
-    &.active {
-
-        font-size: 1.6em;
-        white-space: normal;
-        color: $color-white;
-
-        + .list-effects {
             display: block;
         }
     }

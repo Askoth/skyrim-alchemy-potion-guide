@@ -1,0 +1,15 @@
+<li class="list-item">
+
+    <div role="button" class="div-button item"><%= ingredient.name %></div>
+    <ol class="list-effects">
+        <% _.each(ingredient.effects, function(effect) { %>
+            <li class="item-effects">
+                <label>
+                    <input type="checkbox" />
+                    <%= effect %>
+                </label>
+            </li>
+        <% }) %>
+    </ol>
+
+</li>

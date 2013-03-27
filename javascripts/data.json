@@ -1,9 +1,8 @@
 {
-    "ingredients": {
-        "Abecean Longfin": {
+    "ingredients": [
+        {
             "name": "Abecean Longfin",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Lakes, rivers, streams, fish barrels",
             "effects": [
@@ -13,10 +12,9 @@
                 "Fortify Restoration"
             ]
         },
-        "Ancestor Moth Wing": {
+        {
             "name": "Ancestor Moth Wing",
             "expansion": "dawnguard",
-            "id": "",
             "image": "",
             "getFrom": "Ancestor Glade",
             "effects": [
@@ -26,10 +24,9 @@
                 "Fortify Enchanting"
             ]
         },
-        "Ash Creep Cluster": {
+        {
             "name": "Ash Creep Cluster",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Harvested from ash covered areas of Solstheim",
             "effects": [
@@ -39,10 +36,9 @@
                 "Fortify Destruction"
             ]
         },
-        "Ash Hopper Jelly": {
+        {
             "name": "Ash Hopper Jelly",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Ash Hopper Corpses",
             "effects": [
@@ -52,10 +48,9 @@
                 "Weakness to Frost"
             ]
         },
-        "Ashen Grass Pod": {
+        {
             "name": "Ashen Grass Pod",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Harvested from ash covered areas of Solstheim",
             "effects": [
@@ -65,10 +60,9 @@
                 "Fortify Sneak"
             ]
         },
-        "Bear Claws": {
+        {
             "name": "Bear Claws",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Bears",
             "effects": [
@@ -78,10 +72,9 @@
                 "Damage Magicka Regen"
             ]
         },
-        "Bee": {
+        {
             "name": "Bee",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Beehive",
             "effects": [
@@ -91,10 +84,9 @@
                 "Weakness to Shock"
             ]
         },
-        "Beehive Husk": {
+        {
             "name": "Beehive Husk",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Beehive",
             "effects": [
@@ -104,10 +96,9 @@
                 "Fortify Destruction"
             ]
         },
-        "Berit's Ashes(Identical to Bone Meal)": {
+        {
             "name": "Berit's Ashes(Identical to Bone Meal)",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Quest item given by Thadgeir",
             "effects": [
@@ -117,10 +108,9 @@
                 "Ravage Stamina"
             ]
         },
-        "Bleeding Crown": {
+        {
             "name": "Bleeding Crown",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mushroom clusters",
             "effects": [
@@ -130,10 +120,9 @@
                 "Resist Magic"
             ]
         },
-        "Blisterwort": {
+        {
             "name": "Blisterwort",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Caves and dark areas",
             "effects": [
@@ -143,10 +132,9 @@
                 "Fortify Smithing"
             ]
         },
-        "Blue Butterfly Wing": {
+        {
             "name": "Blue Butterfly Wing",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Blue Butterfly",
             "effects": [
@@ -156,10 +144,9 @@
                 "Fortify Enchanting"
             ]
         },
-        "Blue Dartwing": {
+        {
             "name": "Blue Dartwing",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hovering above water",
             "effects": [
@@ -169,10 +156,9 @@
                 "Fear"
             ]
         },
-        "Blue Mountain Flower": {
+        {
             "name": "Blue Mountain Flower",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mountain flower clumps",
             "effects": [
@@ -182,10 +168,9 @@
                 "Damage Magicka Regen"
             ]
         },
-        "Boar Tusk": {
+        {
             "name": "Boar Tusk",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Tusked Bristlebacks",
             "effects": [
@@ -195,10 +180,9 @@
                 "Frenzy"
             ]
         },
-        "Bone Meal": {
+        {
             "name": "Bone Meal",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Draugr and skeletons",
             "effects": [
@@ -208,10 +192,9 @@
                 "Ravage Stamina"
             ]
         },
-        "Briar Heart": {
+        {
             "name": "Briar Heart",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Forsworn Leaders",
             "effects": [
@@ -221,10 +204,9 @@
                 "Fortify Magicka"
             ]
         },
-        "Burnt Spriggan Wood": {
+        {
             "name": "Burnt Spriggan Wood",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Burnt Spriggans",
             "effects": [
@@ -234,10 +216,9 @@
                 "Slow"
             ]
         },
-        "Butterfly Wing": {
+        {
             "name": "Butterfly Wing",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Monarch Butterfly",
             "effects": [
@@ -247,10 +228,9 @@
                 "Damage Magicka"
             ]
         },
-        "Canis Root": {
+        {
             "name": "Canis Root",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Near rocky areas",
             "effects": [
@@ -260,10 +240,9 @@
                 "Paralysis"
             ]
         },
-        "Charred Skeever Hide": {
+        {
             "name": "Charred Skeever Hide",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Found at campfires",
             "effects": [
@@ -273,10 +252,9 @@
                 "Restore Health"
             ]
         },
-        "Chaurus Eggs": {
+        {
             "name": "Chaurus Eggs",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Falmer caves",
             "effects": [
@@ -286,10 +264,9 @@
                 "Invisibility"
             ]
         },
-        "Chaurus Hunter Antennae": {
+        {
             "name": "Chaurus Hunter Antennae",
             "expansion": "dawnguard",
-            "id": "",
             "image": "",
             "getFrom": "Chaurus Hunter Chaurus Hunter Fledgling",
             "effects": [
@@ -299,10 +276,9 @@
                 "Fortify Enchanting"
             ]
         },
-        "Chicken's Egg": {
+        {
             "name": "Chicken's Egg",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Chicken's Nest",
             "effects": [
@@ -312,10 +288,9 @@
                 "Lingering Damage Stamina"
             ]
         },
-        "Creep Cluster": {
+        {
             "name": "Creep Cluster",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hydro-thermal areas",
             "effects": [
@@ -325,10 +300,9 @@
                 "Weakness to Magic"
             ]
         },
-        "Crimson Nirnroot": {
+        {
             "name": "Crimson Nirnroot",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Blackreach",
             "effects": [
@@ -338,10 +312,9 @@
                 "Resist Magic"
             ]
         },
-        "Cyrodilic Spadetail": {
+        {
             "name": "Cyrodilic Spadetail",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Lakes, rivers, streams, fish barrels",
             "effects": [
@@ -351,10 +324,9 @@
                 "Ravage Health"
             ]
         },
-        "Daedra Heart": {
+        {
             "name": "Daedra Heart",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Daedra",
             "effects": [
@@ -364,10 +336,9 @@
                 "Fear"
             ]
         },
-        "Deathbell": {
+        {
             "name": "Deathbell",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Wild, on planters",
             "effects": [
@@ -377,10 +348,9 @@
                 "Weakness to Poison"
             ]
         },
-        "Dragon's Tongue": {
+        {
             "name": "Dragon's Tongue",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hydro-thermal areas",
             "effects": [
@@ -390,10 +360,9 @@
                 "Fortify Two-handed"
             ]
         },
-        "Dwarven Oil": {
+        {
             "name": "Dwarven Oil",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Dwemer Ruins",
             "effects": [
@@ -403,10 +372,9 @@
                 "Restore Magicka"
             ]
         },
-        "Ectoplasm": {
+        {
             "name": "Ectoplasm",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Ghostlike creatures",
             "effects": [
@@ -416,10 +384,9 @@
                 "Damage Health"
             ]
         },
-        "Elves Ear": {
+        {
             "name": "Elves Ear",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Plant, hanging herbs",
             "effects": [
@@ -429,10 +396,9 @@
                 "Resist Fire"
             ]
         },
-        "Emperor Parasol Moss": {
+        {
             "name": "Emperor Parasol Moss",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Hanging from Emperor Parasol around Tel Mithryn.",
             "effects": [
@@ -442,10 +408,9 @@
                 "Fortify Two-Handed"
             ]
         },
-        "Eye of Sabre Cat": {
+        {
             "name": "Eye of Sabre Cat",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Sabre Cat,Snowy Sabre Cat",
             "effects": [
@@ -455,10 +420,9 @@
                 "Restore Health"
             ]
         },
-        "Falmer Ear": {
+        {
             "name": "Falmer Ear",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Falmer",
             "effects": [
@@ -468,10 +432,9 @@
                 "Fortify Lockpicking"
             ]
         },
-        "Felsaad Tern Feathers": {
+        {
             "name": "Felsaad Tern Feathers",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Felsaad Tern",
             "effects": [
@@ -481,10 +444,9 @@
                 "Resist Magic"
             ]
         },
-        "Fire Salts": {
+        {
             "name": "Fire Salts",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Flame Atronach",
             "effects": [
@@ -494,10 +456,9 @@
                 "Regenerate Magicka"
             ]
         },
-        "Fly Amanita": {
+        {
             "name": "Fly Amanita",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mushroom clusters in and around caves",
             "effects": [
@@ -507,10 +468,9 @@
                 "Regenerate Stamina"
             ]
         },
-        "Frost Mirriam": {
+        {
             "name": "Frost Mirriam",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hanging in homes, businesses and giant camps",
             "effects": [
@@ -520,10 +480,9 @@
                 "Damage Stamina Regen"
             ]
         },
-        "Frost Salts": {
+        {
             "name": "Frost Salts",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Frost Atronach",
             "effects": [
@@ -533,10 +492,9 @@
                 "Fortify Conjuration"
             ]
         },
-        "Garlic": {
+        {
             "name": "Garlic",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hanging in homes, businesses and cooking areas",
             "effects": [
@@ -546,10 +504,9 @@
                 "Regenerate Health"
             ]
         },
-        "Giant Lichen": {
+        {
             "name": "Giant Lichen",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Swamps",
             "effects": [
@@ -559,10 +516,9 @@
                 "Restore Magicka"
             ]
         },
-        "Giant's Toe": {
+        {
             "name": "Giant's Toe",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Giants",
             "effects": [
@@ -572,10 +528,9 @@
                 "Damage Stamina Regen"
             ]
         },
-        "Gleamblossom": {
+        {
             "name": "Gleamblossom",
             "expansion": "dawnguard",
-            "id": "",
             "image": "",
             "getFrom": "Harvested in Darkfall Cave, Forgotten Vale",
             "effects": [
@@ -585,10 +540,9 @@
                 "Paralysis"
             ]
         },
-        "Glow Dust": {
+        {
             "name": "Glow Dust",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Wispmother",
             "effects": [
@@ -598,10 +552,9 @@
                 "Resist Shock"
             ]
         },
-        "Glowing Mushroom": {
+        {
             "name": "Glowing Mushroom",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Caves, Dwemer ruins",
             "effects": [
@@ -611,10 +564,9 @@
                 "Fortify Health"
             ]
         },
-        "Grass Pod": {
+        {
             "name": "Grass Pod",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Tundras",
             "effects": [
@@ -624,10 +576,9 @@
                 "Restore Magicka"
             ]
         },
-        "Hagraven Claw": {
+        {
             "name": "Hagraven Claw",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hagraven",
             "effects": [
@@ -637,10 +588,9 @@
                 "Fortify Barter"
             ]
         },
-        "Hagraven Feathers": {
+        {
             "name": "Hagraven Feathers",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hagraven",
             "effects": [
@@ -650,10 +600,9 @@
                 "Weakness to Shock"
             ]
         },
-        "Hanging Moss": {
+        {
             "name": "Hanging Moss",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Vegetated areas, hanging in caves, from buildings",
             "effects": [
@@ -663,10 +612,9 @@
                 "Fortify One-Handed"
             ]
         },
-        "Hawk Beak": {
+        {
             "name": "Hawk Beak",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hawks",
             "effects": [
@@ -676,10 +624,9 @@
                 "Resist Shock"
             ]
         },
-        "Hawk Feathers": {
+        {
             "name": "Hawk Feathers",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hawks",
             "effects": [
@@ -689,10 +636,9 @@
                 "Fortify Sneak"
             ]
         },
-        "Histcarp": {
+        {
             "name": "Histcarp",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Lakes, rivers, streams and fish barrels",
             "effects": [
@@ -702,10 +648,9 @@
                 "Waterbreathing"
             ]
         },
-        "Honeycomb": {
+        {
             "name": "Honeycomb",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Beehive",
             "effects": [
@@ -715,10 +660,9 @@
                 "Ravage Stamina"
             ]
         },
-        "Human Flesh": {
+        {
             "name": "Human Flesh",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Falmer Vampire dens",
             "effects": [
@@ -728,10 +672,9 @@
                 "Fortify Sneak"
             ]
         },
-        "Human Heart": {
+        {
             "name": "Human Heart",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Falmer Vampire dens",
             "effects": [
@@ -741,10 +684,9 @@
                 "Frenzy"
             ]
         },
-        "Ice Wraith Teeth": {
+        {
             "name": "Ice Wraith Teeth",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Ice Wraith",
             "effects": [
@@ -754,10 +696,9 @@
                 "Weakness to Fire"
             ]
         },
-        "Imp Stool": {
+        {
             "name": "Imp Stool",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mushroom clusters near caves or dungeons",
             "effects": [
@@ -767,10 +708,9 @@
                 "Restore Health"
             ]
         },
-        "Jarrin Root": {
+        {
             "name": "Jarrin Root",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Dark Brotherhood Quest",
             "effects": [
@@ -780,10 +720,9 @@
                 "Damage Magicka Regen"
             ]
         },
-        "Jazbay Grapes": {
+        {
             "name": "Jazbay Grapes",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hydro-thermal regions",
             "effects": [
@@ -793,10 +732,9 @@
                 "Ravage Health"
             ]
         },
-        "Juniper Berries": {
+        {
             "name": "Juniper Berries",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Juniper Trees",
             "effects": [
@@ -806,10 +744,9 @@
                 "Damage Stamina Regen"
             ]
         },
-        "Large Antlers": {
+        {
             "name": "Large Antlers",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Deer, Elk",
             "effects": [
@@ -819,10 +756,9 @@
                 "Damage Stamina Regen"
             ]
         },
-        "Lavender": {
+        {
             "name": "Lavender",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Outdoors in clumps",
             "effects": [
@@ -832,10 +768,9 @@
                 "Fortify Conjuration"
             ]
         },
-        "Luna Moth Wing": {
+        {
             "name": "Luna Moth Wing",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Luna Moth",
             "effects": [
@@ -845,10 +780,9 @@
                 "Invisibility"
             ]
         },
-        "Moon Sugar": {
+        {
             "name": "Moon Sugar",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Khajit Caravans",
             "effects": [
@@ -858,10 +792,9 @@
                 "Regenerate Magicka"
             ]
         },
-        "Mora Tapinella": {
+        {
             "name": "Mora Tapinella",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Dead Trees",
             "effects": [
@@ -871,10 +804,9 @@
                 "Fortify Illusion"
             ]
         },
-        "Mudcrab Chitin": {
+        {
             "name": "Mudcrab Chitin",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mudcrabs",
             "effects": [
@@ -884,10 +816,9 @@
                 "Resist Fire"
             ]
         },
-        "Namira's Rot": {
+        {
             "name": "Namira's Rot",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Caves",
             "effects": [
@@ -897,10 +828,9 @@
                 "Regenerate Health"
             ]
         },
-        "Netch Jelly": {
+        {
             "name": "Netch Jelly",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Netch",
             "effects": [
@@ -910,10 +840,9 @@
                 "Fear"
             ]
         },
-        "Nightshade": {
+        {
             "name": "Nightshade",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Graveyards, undead areas",
             "effects": [
@@ -923,10 +852,9 @@
                 "Fortify Destruction"
             ]
         },
-        "Nirnroot": {
+        {
             "name": "Nirnroot",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Near water",
             "effects": [
@@ -936,10 +864,9 @@
                 "Resist Magic"
             ]
         },
-        "Nordic Barnacle": {
+        {
             "name": "Nordic Barnacle",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Underwater",
             "effects": [
@@ -949,10 +876,9 @@
                 "Fortify Pickpocket"
             ]
         },
-        "Orange Dartwing": {
+        {
             "name": "Orange Dartwing",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Hovering above water",
             "effects": [
@@ -962,10 +888,9 @@
                 "Lingering Damage Health"
             ]
         },
-        "Pearl": {
+        {
             "name": "Pearl",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Satchels; Alchemy Laboratory of a Homestead** Pearl Oyster***",
             "effects": [
@@ -975,10 +900,9 @@
                 "Resist Shock"
             ]
         },
-        "Pine Thrush Egg": {
+        {
             "name": "Pine Thrush Egg",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Nests in forests",
             "effects": [
@@ -988,10 +912,9 @@
                 "Resist Shock"
             ]
         },
-        "Poison Bloom": {
+        {
             "name": "Poison Bloom",
             "expansion": "dawnguard",
-            "id": "",
             "image": "",
             "getFrom": "Darkfall Cave",
             "effects": [
@@ -1001,10 +924,9 @@
                 "Fear"
             ]
         },
-        "Powdered Mammoth Tusk": {
+        {
             "name": "Powdered Mammoth Tusk",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Giant's Camp, Alchemy Laboratory of a Homestead*",
             "effects": [
@@ -1014,10 +936,9 @@
                 "Fear"
             ]
         },
-        "Purple Mountain Flower": {
+        {
             "name": "Purple Mountain Flower",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mountain flower clumps",
             "effects": [
@@ -1027,10 +948,9 @@
                 "Resist Frost"
             ]
         },
-        "Red Mountain Flower": {
+        {
             "name": "Red Mountain Flower",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mountain flower clumps",
             "effects": [
@@ -1040,10 +960,9 @@
                 "Damage Health"
             ]
         },
-        "River Betty": {
+        {
             "name": "River Betty",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Lakes, rivers, streams and fish barrels",
             "effects": [
@@ -1053,10 +972,9 @@
                 "Fortify Carry Weight"
             ]
         },
-        "Rock Warbler Egg": {
+        {
             "name": "Rock Warbler Egg",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Rock Warbler Nest",
             "effects": [
@@ -1066,10 +984,9 @@
                 "Weakness to Magic"
             ]
         },
-        "Sabre Cat Tooth": {
+        {
             "name": "Sabre Cat Tooth",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Sabre Cat,Frost Sabre Cat",
             "effects": [
@@ -1079,10 +996,9 @@
                 "Weakness to Poison"
             ]
         },
-        "Salmon Roe": {
+        {
             "name": "Salmon Roe",
             "expansion": "dawnguard",
-            "id": "",
             "image": "",
             "getFrom": "Salmon jumping up falls, Kitchen of a Homestead*",
             "effects": [
@@ -1092,10 +1008,9 @@
                 "Regenerate Magicka"
             ]
         },
-        "Salt Pile": {
+        {
             "name": "Salt Pile",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Merchants, containers, near cooking places",
             "effects": [
@@ -1105,10 +1020,9 @@
                 "Regenerate Magicka"
             ]
         },
-        "Scaly Pholiota": {
+        {
             "name": "Scaly Pholiota",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Dead birch trees",
             "effects": [
@@ -1118,10 +1032,9 @@
                 "Fortify Carry Weight"
             ]
         },
-        "Scathecraw": {
+        {
             "name": "Scathecraw",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Harvested all over Solstheim",
             "effects": [
@@ -1131,10 +1044,9 @@
                 "Lingering Damage Health"
             ]
         },
-        "Silverside Perch": {
+        {
             "name": "Silverside Perch",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Lakes, rivers, streams and fish barrels",
             "effects": [
@@ -1144,10 +1056,9 @@
                 "Resist Frost"
             ]
         },
-        "Skeever Tail": {
+        {
             "name": "Skeever Tail",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Skeever",
             "effects": [
@@ -1157,10 +1068,9 @@
                 "Fortify Light Armor"
             ]
         },
-        "Slaughterfish Egg": {
+        {
             "name": "Slaughterfish Egg",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Underwater",
             "effects": [
@@ -1170,10 +1080,9 @@
                 "Fortify Stamina"
             ]
         },
-        "Slaughterfish Scales": {
+        {
             "name": "Slaughterfish Scales",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Slaughterfish",
             "effects": [
@@ -1183,10 +1092,9 @@
                 "Fortify Block"
             ]
         },
-        "Small Antlers": {
+        {
             "name": "Small Antlers",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Elk",
             "effects": [
@@ -1196,10 +1104,9 @@
                 "Damage Health"
             ]
         },
-        "Small Pearl": {
+        {
             "name": "Small Pearl",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Pearl Oyster***",
             "effects": [
@@ -1209,10 +1116,9 @@
                 "Resist Frost"
             ]
         },
-        "Snowberries": {
+        {
             "name": "Snowberries",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Snowberry bush, snowy areas",
             "effects": [
@@ -1222,10 +1128,9 @@
                 "Resist Shock"
             ]
         },
-        "Spawn Ash": {
+        {
             "name": "Spawn Ash",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Ash Spawn",
             "effects": [
@@ -1235,10 +1140,9 @@
                 "Ravage Magicka"
             ]
         },
-        "Spider Egg": {
+        {
             "name": "Spider Egg",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Spider lairs",
             "effects": [
@@ -1248,10 +1152,9 @@
                 "Fortify Marksman"
             ]
         },
-        "Spriggan Sap": {
+        {
             "name": "Spriggan Sap",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Spriggan",
             "effects": [
@@ -1261,10 +1164,9 @@
                 "Fortify Alteration"
             ]
         },
-        "Swamp Fungal Pod": {
+        {
             "name": "Swamp Fungal Pod",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Swamps",
             "effects": [
@@ -1274,10 +1176,9 @@
                 "Restore Health"
             ]
         },
-        "Taproot": {
+        {
             "name": "Taproot",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Spriggan",
             "effects": [
@@ -1287,10 +1188,9 @@
                 "Restore Magicka"
             ]
         },
-        "Thistle Branch": {
+        {
             "name": "Thistle Branch",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Thistle Plant",
             "effects": [
@@ -1300,10 +1200,9 @@
                 "Fortify Heavy Armor"
             ]
         },
-        "Torchbug Thorax": {
+        {
             "name": "Torchbug Thorax",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Torchbugs, glowing at night",
             "effects": [
@@ -1313,10 +1212,9 @@
                 "Fortify Stamina"
             ]
         },
-        "Trama Root": {
+        {
             "name": "Trama Root",
             "expansion": "dragonborn",
-            "id": "",
             "image": "",
             "getFrom": "Harvested from ashen areas of Solstheim",
             "effects": [
@@ -1326,10 +1224,9 @@
                 "Slow"
             ]
         },
-        "Troll Fat": {
+        {
             "name": "Troll Fat",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Trolls",
             "effects": [
@@ -1339,10 +1236,9 @@
                 "Damage Health"
             ]
         },
-        "Tundra Cotton": {
+        {
             "name": "Tundra Cotton",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "High mountains below snow line, tundra",
             "effects": [
@@ -1352,10 +1248,9 @@
                 "Fortify Barter"
             ]
         },
-        "Vampire Dust": {
+        {
             "name": "Vampire Dust",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Vampires, the Silver Hand",
             "effects": [
@@ -1365,10 +1260,9 @@
                 "Cure Disease"
             ]
         },
-        "Void Salts": {
+        {
             "name": "Void Salts",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Storm Atronach",
             "effects": [
@@ -1378,10 +1272,9 @@
                 "Fortify Magicka"
             ]
         },
-        "Wheat": {
+        {
             "name": "Wheat",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Grows on farms, containers",
             "effects": [
@@ -1391,10 +1284,9 @@
                 "Lingering Damage Magicka"
             ]
         },
-        "White Cap": {
+        {
             "name": "White Cap",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Mushroom clusters near caves or dungeons",
             "effects": [
@@ -1404,10 +1296,9 @@
                 "Ravage Magicka"
             ]
         },
-        "Wisp Wrappings": {
+        {
             "name": "Wisp Wrappings",
             "expansion": "vanilla",
-            "id": "",
             "image": "",
             "getFrom": "Wispmother",
             "effects": [
@@ -1417,10 +1308,9 @@
                 "Resist Magic"
             ]
         },
-        "Yellow Mountain Flower": {
+        {
             "name": "Yellow Mountain Flower",
             "expansion": "dawnguard",
-            "id": "",
             "image": "",
             "getFrom": "Darkfall Cave",
             "effects": [
@@ -1430,559 +1320,727 @@
                 "Damage Stamina Regen"
             ]
         }
-    },
-    "effects": {
-        "Weakness to Frost": [
-            "Abecean Longfin",
-            "Ash Hopper Jelly",
-            "Elves Ear",
-            "Fire Salts",
-            "Ice Wraith Teeth",
-            "White Cap"
-        ],
-        "Fortify Sneak": [
-            "Abecean Longfin",
-            "Ashen Grass Pod",
-            "Beehive Husk",
-            "Frost Mirriam",
-            "Hawk Feathers",
-            "Human Flesh",
-            "Powdered Mammoth Tusk",
-            "Purple Mountain Flower"
-        ],
-        "Weakness to Poison": [
-            "Abecean Longfin",
-            "Bleeding Crown",
-            "Chaurus Eggs",
-            "Deathbell",
-            "Giant Lichen",
-            "Pine Thrush Egg",
-            "Sabre Cat Tooth",
-            "Small Antlers"
-        ],
-        "Fortify Restoration": [
-            "Abecean Longfin",
-            "Cyrodilic Spadetail",
-            "Salt Pile",
-            "Small Antlers",
-            "Small Pearl",
-            "Yellow Mountain Flower"
-        ],
-        "Damage Stamina": [
-            "Ancestor Moth Wing",
-            "Ash Creep Cluster",
-            "Berit's Ashes(Identical to Bone Meal)",
-            "Blisterwort",
-            "Blue Butterfly Wing",
-            "Bone Meal",
-            "Canis Root",
-            "Chaurus Hunter Antennae",
-            "Crimson Nirnroot",
-            "Cyrodilic Spadetail",
-            "Giant's Toe",
-            "Jarrin Root",
-            "Nirnroot",
-            "Rock Warbler Egg",
-            "Spider Egg"
-        ],
-        "Fortify Conjuration": [
-            "Ancestor Moth Wing",
-            "Berit's Ashes(Identical to Bone Meal)",
-            "Blue Butterfly Wing",
-            "Blue Mountain Flower",
-            "Bone Meal",
-            "Chaurus Hunter Antennae",
-            "Frost Salts",
-            "Hagraven Feathers",
-            "Lavender"
-        ],
-        "Damage Magicka Regen": [
-            "Ancestor Moth Wing",
-            "Bear Claws",
-            "Blue Butterfly Wing",
-            "Blue Mountain Flower",
-            "Burnt Spriggan Wood",
-            "Chaurus Hunter Antennae",
-            "Chicken's Egg",
-            "Glow Dust",
-            "Hanging Moss",
-            "Human Heart",
-            "Jarrin Root",
-            "Nightshade",
-            "Spider Egg",
-            "Spriggan Sap"
-        ],
-        "Fortify Enchanting": [
-            "Ancestor Moth Wing",
-            "Blue Butterfly Wing",
-            "Chaurus Hunter Antennae",
-            "Hagraven Claw",
-            "Snowberries",
-            "Spawn Ash",
-            "Spriggan Sap"
-        ],
-        "Invisibility": [
-            "Ash Creep Cluster",
-            "Chaurus Eggs",
-            "Crimson Nirnroot",
-            "Ice Wraith Teeth",
-            "Luna Moth Wing",
-            "Nirnroot",
-            "Vampire Dust"
-        ],
-        "Resist Fire": [
-            "Ash Creep Cluster",
-            "Ashen Grass Pod",
-            "Berit's Ashes(Identical to Bone Meal)",
-            "Bone Meal",
-            "Dragon's Tongue",
-            "Elves Ear",
-            "Fire Salts",
-            "Fly Amanita",
-            "Mudcrab Chitin",
-            "Snowberries",
-            "Spawn Ash"
-        ],
-        "Fortify Destruction": [
-            "Ash Creep Cluster",
-            "Beehive Husk",
-            "Ectoplasm",
-            "Glow Dust",
-            "Glowing Mushroom",
-            "Nightshade",
-            "Wisp Wrappings"
-        ],
-        "Restore Health": [
-            "Ash Hopper Jelly",
-            "Blisterwort",
-            "Blue Dartwing",
-            "Blue Mountain Flower",
-            "Butterfly Wing",
-            "Charred Skeever Hide",
-            "Daedra Heart",
-            "Eye of Sabre Cat",
-            "Felsaad Tern Feathers",
-            "Imp Stool",
-            "Rock Warbler Egg",
-            "Swamp Fungal Pod",
-            "Wheat"
-        ],
-        "Fortify Light Armor": [
-            "Ash Hopper Jelly",
-            "Beehive Husk",
-            "Felsaad Tern Feathers",
-            "Hawk Feathers",
-            "Honeycomb",
-            "Luna Moth Wing",
-            "Skeever Tail"
-        ],
-        "Resist Shock": [
-            "Ash Hopper Jelly",
-            "Blue Dartwing",
-            "Glow Dust",
-            "Glowing Mushroom",
-            "Hawk Beak",
-            "Pearl",
-            "Pine Thrush Egg",
-            "Snowberries",
-            "Swamp Fungal Pod"
-        ],
-        "Weakness to Shock": [
-            "Ashen Grass Pod",
-            "Bee",
-            "Giant Lichen",
-            "Hagraven Feathers",
-            "Trama Root",
-            "Void Salts"
-        ],
-        "Fortify Lockpicking": [
-            "Ashen Grass Pod",
-            "Falmer Ear",
-            "Namira's Rot",
-            "Pine Thrush Egg",
-            "Spider Egg"
-        ],
-        "Restore Stamina": [
-            "Bear Claws",
-            "Bee",
-            "Charred Skeever Hide",
-            "Eye of Sabre Cat",
-            "Hawk Beak",
-            "Histcarp",
-            "Honeycomb",
-            "Large Antlers",
-            "Mudcrab Chitin",
-            "Netch Jelly",
-            "Orange Dartwing",
-            "Pearl",
-            "Pine Thrush Egg",
-            "Powdered Mammoth Tusk",
-            "Purple Mountain Flower",
-            "Sabre Cat Tooth",
-            "Salmon Roe",
-            "Silverside Perch",
-            "Small Pearl",
-            "Torchbug Thorax",
-            "Wisp Wrappings"
-        ],
-        "Fortify Health": [
-            "Bear Claws",
-            "Blue Mountain Flower",
-            "Boar Tusk",
-            "Giant's Toe",
-            "Glowing Mushroom",
-            "Hanging Moss",
-            "Wheat",
-            "Yellow Mountain Flower"
-        ],
-        "Fortify One-Handed": [
-            "Bear Claws",
-            "Canis Root",
-            "Hanging Moss",
-            "Hawk Feathers",
-            "Rock Warbler Egg",
-            "Small Pearl"
-        ],
-        "Ravage Stamina": [
-            "Bee",
-            "Berit's Ashes(Identical to Bone Meal)",
-            "Bone Meal",
-            "Deathbell",
-            "Honeycomb",
-            "Scathecraw",
-            "Spawn Ash",
-            "Thistle Branch"
-        ],
-        "Regenerate Stamina": [
-            "Bee",
-            "Fly Amanita",
-            "Mora Tapinella",
-            "Scaly Pholiota"
-        ],
-        "Resist Poison": [
-            "Beehive Husk",
-            "Charred Skeever Hide",
-            "Falmer Ear",
-            "Garlic",
-            "Grass Pod",
-            "Mudcrab Chitin",
-            "Slaughterfish Egg",
-            "Thistle Branch",
-            "Troll Fat",
-            "Yellow Mountain Flower"
-        ],
-        "Weakness to Fire": [
-            "Bleeding Crown",
-            "Burnt Spriggan Wood",
-            "Frost Salts",
-            "Ice Wraith Teeth",
-            "Juniper Berries",
-            "Moon Sugar",
-            "Powdered Mammoth Tusk"
-        ],
-        "Fortify Block": [
-            "Bleeding Crown",
-            "Boar Tusk",
-            "Briar Heart",
-            "Honeycomb",
-            "Pearl",
-            "Slaughterfish Scales",
-            "Tundra Cotton"
-        ],
-        "Resist Magic": [
-            "Bleeding Crown",
-            "Chicken's Egg",
-            "Crimson Nirnroot",
-            "Felsaad Tern Feathers",
-            "Gleamblossom",
-            "Hagraven Claw",
-            "Lavender",
-            "Nirnroot",
-            "Tundra Cotton",
-            "Void Salts",
-            "Wisp Wrappings"
-        ],
-        "Frenzy": [
-            "Blisterwort",
-            "Boar Tusk",
-            "Falmer Ear",
-            "Fly Amanita",
-            "Hagraven Feathers",
-            "Human Heart",
-            "Troll Fat"
-        ],
-        "Fortify Smithing": [
-            "Blisterwort",
-            "Glowing Mushroom",
-            "Sabre Cat Tooth",
-            "Spriggan Sap"
-        ],
-        "Fortify Pickpocket": [
-            "Blue Dartwing",
-            "Nordic Barnacle",
-            "Orange Dartwing",
-            "Slaughterfish Egg"
-        ],
-        "Fear": [
-            "Blue Dartwing",
-            "Cyrodilic Spadetail",
-            "Daedra Heart",
-            "Gleamblossom",
-            "Namira's Rot",
-            "Netch Jelly",
-            "Poison Bloom",
-            "Powdered Mammoth Tusk"
-        ],
-        "Fortify Stamina": [
-            "Boar Tusk",
-            "Chaurus Eggs",
-            "Garlic",
-            "Large Antlers",
-            "Lavender",
-            "Slaughterfish Egg",
-            "Torchbug Thorax"
-        ],
-        "Restore Magicka": [
-            "Briar Heart",
-            "Creep Cluster",
-            "Dwarven Oil",
-            "Ectoplasm",
-            "Elves Ear",
-            "Fire Salts",
-            "Frost Salts",
-            "Giant Lichen",
-            "Grass Pod",
-            "Human Flesh",
-            "Moon Sugar",
-            "Mora Tapinella",
-            "Pearl",
-            "Red Mountain Flower",
-            "Taproot",
-            "Vampire Dust",
-            "White Cap"
-        ],
-        "Paralysis": [
-            "Briar Heart",
-            "Canis Root",
-            "Gleamblossom",
-            "Human Flesh",
-            "Imp Stool",
-            "Netch Jelly",
-            "Swamp Fungal Pod"
-        ],
-        "Fortify Magicka": [
-            "Briar Heart",
-            "Ectoplasm",
-            "Emperor Parasol Moss",
-            "Histcarp",
-            "Jazbay Grapes",
-            "Red Mountain Flower",
-            "Salmon Roe",
-            "Tundra Cotton",
-            "Void Salts"
-        ],
-        "Fortify Alteration": [
-            "Burnt Spriggan Wood",
-            "Grass Pod",
-            "River Betty",
-            "Spriggan Sap"
-        ],
-        "Slow": [
-            "Burnt Spriggan Wood",
-            "Deathbell",
-            "Large Antlers",
-            "Poison Bloom",
-            "River Betty",
-            "Salt Pile",
-            "Trama Root"
-        ],
-        "Fortify Barter": [
-            "Butterfly Wing",
-            "Dragon's Tongue",
-            "Hagraven Claw",
-            "Tundra Cotton"
-        ],
-        "Lingering Damage Stamina": [
-            "Butterfly Wing",
-            "Chicken's Egg",
-            "Nightshade",
-            "Small Antlers"
-        ],
-        "Damage Magicka": [
-            "Butterfly Wing",
-            "Chaurus Eggs",
-            "Daedra Heart",
-            "Eye of Sabre Cat",
-            "Glow Dust",
-            "Hagraven Feathers",
-            "Hanging Moss",
-            "Human Heart",
-            "Jarrin Root",
-            "Luna Moth Wing",
-            "Namira's Rot",
-            "Nordic Barnacle",
-            "Trama Root"
-        ],
-        "Fortify Marksman": [
-            "Canis Root",
-            "Elves Ear",
-            "Juniper Berries",
-            "Spider Egg"
-        ],
-        "Cure Disease": [
-            "Charred Skeever Hide",
-            "Felsaad Tern Feathers",
-            "Hawk Feathers",
-            "Mudcrab Chitin",
-            "Vampire Dust"
-        ],
-        "Waterbreathing": [
-            "Chicken's Egg",
-            "Histcarp",
-            "Nordic Barnacle",
-            "Salmon Roe"
-        ],
-        "Damage Stamina Regen": [
-            "Creep Cluster",
-            "Daedra Heart",
-            "Frost Mirriam",
-            "Giant's Toe",
-            "Histcarp",
-            "Juniper Berries",
-            "Large Antlers",
-            "Silverside Perch",
-            "Skeever Tail",
-            "Wheat",
-            "Yellow Mountain Flower"
-        ],
-        "Fortify Carry Weight": [
-            "Creep Cluster",
-            "Giant's Toe",
-            "Hawk Beak",
-            "Netch Jelly",
-            "Poison Bloom",
-            "River Betty",
-            "Scaly Pholiota",
-            "Trama Root",
-            "Wisp Wrappings"
-        ],
-        "Weakness to Magic": [
-            "Creep Cluster",
-            "Dwarven Oil",
-            "Jazbay Grapes",
-            "Rock Warbler Egg",
-            "Salt Pile",
-            "Scaly Pholiota",
-            "Taproot",
-            "Torchbug Thorax"
-        ],
-        "Damage Health": [
-            "Crimson Nirnroot",
-            "Deathbell",
-            "Ectoplasm",
-            "Emperor Parasol Moss",
-            "Falmer Ear",
-            "Human Flesh",
-            "Human Heart",
-            "Imp Stool",
-            "Jarrin Root",
-            "Nightshade",
-            "Nirnroot",
-            "Poison Bloom",
-            "Red Mountain Flower",
-            "River Betty",
-            "Skeever Tail",
-            "Small Antlers",
-            "Troll Fat",
-            "Void Salts"
-        ],
-        "Ravage Health": [
-            "Cyrodilic Spadetail",
-            "Eye of Sabre Cat",
-            "Giant Lichen",
-            "Jazbay Grapes",
-            "Scathecraw",
-            "Silverside Perch",
-            "Skeever Tail"
-        ],
-        "Fortify Illusion": [
-            "Dragon's Tongue",
-            "Dwarven Oil",
-            "Mora Tapinella",
-            "Scaly Pholiota",
-            "Taproot"
-        ],
-        "Fortify Two-handed": [
-            "Dragon's Tongue",
-            "Fly Amanita",
-            "Troll Fat"
-        ],
-        "Regenerate Magicka": [
-            "Dwarven Oil",
-            "Fire Salts",
-            "Garlic",
-            "Jazbay Grapes",
-            "Moon Sugar",
-            "Salmon Roe",
-            "Salt Pile",
-            "Taproot"
-        ],
-        "Regenerate Health": [
-            "Emperor Parasol Moss",
-            "Garlic",
-            "Gleamblossom",
-            "Juniper Berries",
-            "Luna Moth Wing",
-            "Namira's Rot",
-            "Nordic Barnacle",
-            "Vampire Dust"
-        ],
-        "Fortify Two-Handed": [
-            "Emperor Parasol Moss"
-        ],
-        "Resist Frost": [
-            "Frost Mirriam",
-            "Frost Salts",
-            "Hawk Beak",
-            "Moon Sugar",
-            "Purple Mountain Flower",
-            "Silverside Perch",
-            "Slaughterfish Scales",
-            "Small Pearl",
-            "Snowberries",
-            "Thistle Branch"
-        ],
-        "Ravage Magicka": [
-            "Frost Mirriam",
-            "Grass Pod",
-            "Lavender",
-            "Orange Dartwing",
-            "Red Mountain Flower",
-            "Scathecraw",
-            "Spawn Ash",
-            "White Cap"
-        ],
-        "Lingering Damage Magicka": [
-            "Hagraven Claw",
-            "Purple Mountain Flower",
-            "Swamp Fungal Pod",
-            "Torchbug Thorax",
-            "Wheat"
-        ],
-        "Fortify Heavy Armor": [
-            "Ice Wraith Teeth",
-            "Sabre Cat Tooth",
-            "Slaughterfish Scales",
-            "Thistle Branch",
-            "White Cap"
-        ],
-        "Lingering Damage Health": [
-            "Imp Stool",
-            "Mora Tapinella",
-            "Orange Dartwing",
-            "Scathecraw",
-            "Slaughterfish Egg",
-            "Slaughterfish Scales"
-        ]
-    }
+    ],
+    "effects": [
+        {
+            "effect": "Weakness to Frost",
+            "ingredients": [
+                "Abecean Longfin",
+                "Ash Hopper Jelly",
+                "Elves Ear",
+                "Fire Salts",
+                "Ice Wraith Teeth",
+                "White Cap"
+            ]
+        },
+        {
+            "effect": "Fortify Sneak",
+            "ingredients": [
+                "Abecean Longfin",
+                "Ashen Grass Pod",
+                "Beehive Husk",
+                "Frost Mirriam",
+                "Hawk Feathers",
+                "Human Flesh",
+                "Powdered Mammoth Tusk",
+                "Purple Mountain Flower"
+            ]
+        },
+        {
+            "effect": "Weakness to Poison",
+            "ingredients": [
+                "Abecean Longfin",
+                "Bleeding Crown",
+                "Chaurus Eggs",
+                "Deathbell",
+                "Giant Lichen",
+                "Pine Thrush Egg",
+                "Sabre Cat Tooth",
+                "Small Antlers"
+            ]
+        },
+        {
+            "effect": "Fortify Restoration",
+            "ingredients": [
+                "Abecean Longfin",
+                "Cyrodilic Spadetail",
+                "Salt Pile",
+                "Small Antlers",
+                "Small Pearl",
+                "Yellow Mountain Flower"
+            ]
+        },
+        {
+            "effect": "Damage Stamina",
+            "ingredients": [
+                "Ancestor Moth Wing",
+                "Ash Creep Cluster",
+                "Berit's Ashes(Identical to Bone Meal)",
+                "Blisterwort",
+                "Blue Butterfly Wing",
+                "Bone Meal",
+                "Canis Root",
+                "Chaurus Hunter Antennae",
+                "Crimson Nirnroot",
+                "Cyrodilic Spadetail",
+                "Giant's Toe",
+                "Jarrin Root",
+                "Nirnroot",
+                "Rock Warbler Egg",
+                "Spider Egg"
+            ]
+        },
+        {
+            "effect": "Fortify Conjuration",
+            "ingredients": [
+                "Ancestor Moth Wing",
+                "Berit's Ashes(Identical to Bone Meal)",
+                "Blue Butterfly Wing",
+                "Blue Mountain Flower",
+                "Bone Meal",
+                "Chaurus Hunter Antennae",
+                "Frost Salts",
+                "Hagraven Feathers",
+                "Lavender"
+            ]
+        },
+        {
+            "effect": "Damage Magicka Regen",
+            "ingredients": [
+                "Ancestor Moth Wing",
+                "Bear Claws",
+                "Blue Butterfly Wing",
+                "Blue Mountain Flower",
+                "Burnt Spriggan Wood",
+                "Chaurus Hunter Antennae",
+                "Chicken's Egg",
+                "Glow Dust",
+                "Hanging Moss",
+                "Human Heart",
+                "Jarrin Root",
+                "Nightshade",
+                "Spider Egg",
+                "Spriggan Sap"
+            ]
+        },
+        {
+            "effect": "Fortify Enchanting",
+            "ingredients": [
+                "Ancestor Moth Wing",
+                "Blue Butterfly Wing",
+                "Chaurus Hunter Antennae",
+                "Hagraven Claw",
+                "Snowberries",
+                "Spawn Ash",
+                "Spriggan Sap"
+            ]
+        },
+        {
+            "effect": "Invisibility",
+            "ingredients": [
+                "Ash Creep Cluster",
+                "Chaurus Eggs",
+                "Crimson Nirnroot",
+                "Ice Wraith Teeth",
+                "Luna Moth Wing",
+                "Nirnroot",
+                "Vampire Dust"
+            ]
+        },
+        {
+            "effect": "Resist Fire",
+            "ingredients": [
+                "Ash Creep Cluster",
+                "Ashen Grass Pod",
+                "Berit's Ashes(Identical to Bone Meal)",
+                "Bone Meal",
+                "Dragon's Tongue",
+                "Elves Ear",
+                "Fire Salts",
+                "Fly Amanita",
+                "Mudcrab Chitin",
+                "Snowberries",
+                "Spawn Ash"
+            ]
+        },
+        {
+            "effect": "Fortify Destruction",
+            "ingredients": [
+                "Ash Creep Cluster",
+                "Beehive Husk",
+                "Ectoplasm",
+                "Glow Dust",
+                "Glowing Mushroom",
+                "Nightshade",
+                "Wisp Wrappings"
+            ]
+        },
+        {
+            "effect": "Restore Health",
+            "ingredients": [
+                "Ash Hopper Jelly",
+                "Blisterwort",
+                "Blue Dartwing",
+                "Blue Mountain Flower",
+                "Butterfly Wing",
+                "Charred Skeever Hide",
+                "Daedra Heart",
+                "Eye of Sabre Cat",
+                "Felsaad Tern Feathers",
+                "Imp Stool",
+                "Rock Warbler Egg",
+                "Swamp Fungal Pod",
+                "Wheat"
+            ]
+        },
+        {
+            "effect": "Fortify Light Armor",
+            "ingredients": [
+                "Ash Hopper Jelly",
+                "Beehive Husk",
+                "Felsaad Tern Feathers",
+                "Hawk Feathers",
+                "Honeycomb",
+                "Luna Moth Wing",
+                "Skeever Tail"
+            ]
+        },
+        {
+            "effect": "Resist Shock",
+            "ingredients": [
+                "Ash Hopper Jelly",
+                "Blue Dartwing",
+                "Glow Dust",
+                "Glowing Mushroom",
+                "Hawk Beak",
+                "Pearl",
+                "Pine Thrush Egg",
+                "Snowberries",
+                "Swamp Fungal Pod"
+            ]
+        },
+        {
+            "effect": "Weakness to Shock",
+            "ingredients": [
+                "Ashen Grass Pod",
+                "Bee",
+                "Giant Lichen",
+                "Hagraven Feathers",
+                "Trama Root",
+                "Void Salts"
+            ]
+        },
+        {
+            "effect": "Fortify Lockpicking",
+            "ingredients": [
+                "Ashen Grass Pod",
+                "Falmer Ear",
+                "Namira's Rot",
+                "Pine Thrush Egg",
+                "Spider Egg"
+            ]
+        },
+        {
+            "effect": "Restore Stamina",
+            "ingredients": [
+                "Bear Claws",
+                "Bee",
+                "Charred Skeever Hide",
+                "Eye of Sabre Cat",
+                "Hawk Beak",
+                "Histcarp",
+                "Honeycomb",
+                "Large Antlers",
+                "Mudcrab Chitin",
+                "Netch Jelly",
+                "Orange Dartwing",
+                "Pearl",
+                "Pine Thrush Egg",
+                "Powdered Mammoth Tusk",
+                "Purple Mountain Flower",
+                "Sabre Cat Tooth",
+                "Salmon Roe",
+                "Silverside Perch",
+                "Small Pearl",
+                "Torchbug Thorax",
+                "Wisp Wrappings"
+            ]
+        },
+        {
+            "effect": "Fortify Health",
+            "ingredients": [
+                "Bear Claws",
+                "Blue Mountain Flower",
+                "Boar Tusk",
+                "Giant's Toe",
+                "Glowing Mushroom",
+                "Hanging Moss",
+                "Wheat",
+                "Yellow Mountain Flower"
+            ]
+        },
+        {
+            "effect": "Fortify One-Handed",
+            "ingredients": [
+                "Bear Claws",
+                "Canis Root",
+                "Hanging Moss",
+                "Hawk Feathers",
+                "Rock Warbler Egg",
+                "Small Pearl"
+            ]
+        },
+        {
+            "effect": "Ravage Stamina",
+            "ingredients": [
+                "Bee",
+                "Berit's Ashes(Identical to Bone Meal)",
+                "Bone Meal",
+                "Deathbell",
+                "Honeycomb",
+                "Scathecraw",
+                "Spawn Ash",
+                "Thistle Branch"
+            ]
+        },
+        {
+            "effect": "Regenerate Stamina",
+            "ingredients": [
+                "Bee",
+                "Fly Amanita",
+                "Mora Tapinella",
+                "Scaly Pholiota"
+            ]
+        },
+        {
+            "effect": "Resist Poison",
+            "ingredients": [
+                "Beehive Husk",
+                "Charred Skeever Hide",
+                "Falmer Ear",
+                "Garlic",
+                "Grass Pod",
+                "Mudcrab Chitin",
+                "Slaughterfish Egg",
+                "Thistle Branch",
+                "Troll Fat",
+                "Yellow Mountain Flower"
+            ]
+        },
+        {
+            "effect": "Weakness to Fire",
+            "ingredients": [
+                "Bleeding Crown",
+                "Burnt Spriggan Wood",
+                "Frost Salts",
+                "Ice Wraith Teeth",
+                "Juniper Berries",
+                "Moon Sugar",
+                "Powdered Mammoth Tusk"
+            ]
+        },
+        {
+            "effect": "Fortify Block",
+            "ingredients": [
+                "Bleeding Crown",
+                "Boar Tusk",
+                "Briar Heart",
+                "Honeycomb",
+                "Pearl",
+                "Slaughterfish Scales",
+                "Tundra Cotton"
+            ]
+        },
+        {
+            "effect": "Resist Magic",
+            "ingredients": [
+                "Bleeding Crown",
+                "Chicken's Egg",
+                "Crimson Nirnroot",
+                "Felsaad Tern Feathers",
+                "Gleamblossom",
+                "Hagraven Claw",
+                "Lavender",
+                "Nirnroot",
+                "Tundra Cotton",
+                "Void Salts",
+                "Wisp Wrappings"
+            ]
+        },
+        {
+            "effect": "Frenzy",
+            "ingredients": [
+                "Blisterwort",
+                "Boar Tusk",
+                "Falmer Ear",
+                "Fly Amanita",
+                "Hagraven Feathers",
+                "Human Heart",
+                "Troll Fat"
+            ]
+        },
+        {
+            "effect": "Fortify Smithing",
+            "ingredients": [
+                "Blisterwort",
+                "Glowing Mushroom",
+                "Sabre Cat Tooth",
+                "Spriggan Sap"
+            ]
+        },
+        {
+            "effect": "Fortify Pickpocket",
+            "ingredients": [
+                "Blue Dartwing",
+                "Nordic Barnacle",
+                "Orange Dartwing",
+                "Slaughterfish Egg"
+            ]
+        },
+        {
+            "effect": "Fear",
+            "ingredients": [
+                "Blue Dartwing",
+                "Cyrodilic Spadetail",
+                "Daedra Heart",
+                "Gleamblossom",
+                "Namira's Rot",
+                "Netch Jelly",
+                "Poison Bloom",
+                "Powdered Mammoth Tusk"
+            ]
+        },
+        {
+            "effect": "Fortify Stamina",
+            "ingredients": [
+                "Boar Tusk",
+                "Chaurus Eggs",
+                "Garlic",
+                "Large Antlers",
+                "Lavender",
+                "Slaughterfish Egg",
+                "Torchbug Thorax"
+            ]
+        },
+        {
+            "effect": "Restore Magicka",
+            "ingredients": [
+                "Briar Heart",
+                "Creep Cluster",
+                "Dwarven Oil",
+                "Ectoplasm",
+                "Elves Ear",
+                "Fire Salts",
+                "Frost Salts",
+                "Giant Lichen",
+                "Grass Pod",
+                "Human Flesh",
+                "Moon Sugar",
+                "Mora Tapinella",
+                "Pearl",
+                "Red Mountain Flower",
+                "Taproot",
+                "Vampire Dust",
+                "White Cap"
+            ]
+        },
+        {
+            "effect": "Paralysis",
+            "ingredients": [
+                "Briar Heart",
+                "Canis Root",
+                "Gleamblossom",
+                "Human Flesh",
+                "Imp Stool",
+                "Netch Jelly",
+                "Swamp Fungal Pod"
+            ]
+        },
+        {
+            "effect": "Fortify Magicka",
+            "ingredients": [
+                "Briar Heart",
+                "Ectoplasm",
+                "Emperor Parasol Moss",
+                "Histcarp",
+                "Jazbay Grapes",
+                "Red Mountain Flower",
+                "Salmon Roe",
+                "Tundra Cotton",
+                "Void Salts"
+            ]
+        },
+        {
+            "effect": "Fortify Alteration",
+            "ingredients": [
+                "Burnt Spriggan Wood",
+                "Grass Pod",
+                "River Betty",
+                "Spriggan Sap"
+            ]
+        },
+        {
+            "effect": "Slow",
+            "ingredients": [
+                "Burnt Spriggan Wood",
+                "Deathbell",
+                "Large Antlers",
+                "Poison Bloom",
+                "River Betty",
+                "Salt Pile",
+                "Trama Root"
+            ]
+        },
+        {
+            "effect": "Fortify Barter",
+            "ingredients": [
+                "Butterfly Wing",
+                "Dragon's Tongue",
+                "Hagraven Claw",
+                "Tundra Cotton"
+            ]
+        },
+        {
+            "effect": "Lingering Damage Stamina",
+            "ingredients": [
+                "Butterfly Wing",
+                "Chicken's Egg",
+                "Nightshade",
+                "Small Antlers"
+            ]
+        },
+        {
+            "effect": "Damage Magicka",
+            "ingredients": [
+                "Butterfly Wing",
+                "Chaurus Eggs",
+                "Daedra Heart",
+                "Eye of Sabre Cat",
+                "Glow Dust",
+                "Hagraven Feathers",
+                "Hanging Moss",
+                "Human Heart",
+                "Jarrin Root",
+                "Luna Moth Wing",
+                "Namira's Rot",
+                "Nordic Barnacle",
+                "Trama Root"
+            ]
+        },
+        {
+            "effect": "Fortify Marksman",
+            "ingredients": [
+                "Canis Root",
+                "Elves Ear",
+                "Juniper Berries",
+                "Spider Egg"
+            ]
+        },
+        {
+            "effect": "Cure Disease",
+            "ingredients": [
+                "Charred Skeever Hide",
+                "Felsaad Tern Feathers",
+                "Hawk Feathers",
+                "Mudcrab Chitin",
+                "Vampire Dust"
+            ]
+        },
+        {
+            "effect": "Waterbreathing",
+            "ingredients": [
+                "Chicken's Egg",
+                "Histcarp",
+                "Nordic Barnacle",
+                "Salmon Roe"
+            ]
+        },
+        {
+            "effect": "Damage Stamina Regen",
+            "ingredients": [
+                "Creep Cluster",
+                "Daedra Heart",
+                "Frost Mirriam",
+                "Giant's Toe",
+                "Histcarp",
+                "Juniper Berries",
+                "Large Antlers",
+                "Silverside Perch",
+                "Skeever Tail",
+                "Wheat",
+                "Yellow Mountain Flower"
+            ]
+        },
+        {
+            "effect": "Fortify Carry Weight",
+            "ingredients": [
+                "Creep Cluster",
+                "Giant's Toe",
+                "Hawk Beak",
+                "Netch Jelly",
+                "Poison Bloom",
+                "River Betty",
+                "Scaly Pholiota",
+                "Trama Root",
+                "Wisp Wrappings"
+            ]
+        },
+        {
+            "effect": "Weakness to Magic",
+            "ingredients": [
+                "Creep Cluster",
+                "Dwarven Oil",
+                "Jazbay Grapes",
+                "Rock Warbler Egg",
+                "Salt Pile",
+                "Scaly Pholiota",
+                "Taproot",
+                "Torchbug Thorax"
+            ]
+        },
+        {
+            "effect": "Damage Health",
+            "ingredients": [
+                "Crimson Nirnroot",
+                "Deathbell",
+                "Ectoplasm",
+                "Emperor Parasol Moss",
+                "Falmer Ear",
+                "Human Flesh",
+                "Human Heart",
+                "Imp Stool",
+                "Jarrin Root",
+                "Nightshade",
+                "Nirnroot",
+                "Poison Bloom",
+                "Red Mountain Flower",
+                "River Betty",
+                "Skeever Tail",
+                "Small Antlers",
+                "Troll Fat",
+                "Void Salts"
+            ]
+        },
+        {
+            "effect": "Ravage Health",
+            "ingredients": [
+                "Cyrodilic Spadetail",
+                "Eye of Sabre Cat",
+                "Giant Lichen",
+                "Jazbay Grapes",
+                "Scathecraw",
+                "Silverside Perch",
+                "Skeever Tail"
+            ]
+        },
+        {
+            "effect": "Fortify Illusion",
+            "ingredients": [
+                "Dragon's Tongue",
+                "Dwarven Oil",
+                "Mora Tapinella",
+                "Scaly Pholiota",
+                "Taproot"
+            ]
+        },
+        {
+            "effect": "Fortify Two-handed",
+            "ingredients": [
+                "Dragon's Tongue",
+                "Fly Amanita",
+                "Troll Fat"
+            ]
+        },
+        {
+            "effect": "Regenerate Magicka",
+            "ingredients": [
+                "Dwarven Oil",
+                "Fire Salts",
+                "Garlic",
+                "Jazbay Grapes",
+                "Moon Sugar",
+                "Salmon Roe",
+                "Salt Pile",
+                "Taproot"
+            ]
+        },
+        {
+            "effect": "Regenerate Health",
+            "ingredients": [
+                "Emperor Parasol Moss",
+                "Garlic",
+                "Gleamblossom",
+                "Juniper Berries",
+                "Luna Moth Wing",
+                "Namira's Rot",
+                "Nordic Barnacle",
+                "Vampire Dust"
+            ]
+        },
+        {
+            "effect": "Fortify Two-Handed",
+            "ingredients": [
+                "Emperor Parasol Moss"
+            ]
+        },
+        {
+            "effect": "Resist Frost",
+            "ingredients": [
+                "Frost Mirriam",
+                "Frost Salts",
+                "Hawk Beak",
+                "Moon Sugar",
+                "Purple Mountain Flower",
+                "Silverside Perch",
+                "Slaughterfish Scales",
+                "Small Pearl",
+                "Snowberries",
+                "Thistle Branch"
+            ]
+        },
+        {
+            "effect": "Ravage Magicka",
+            "ingredients": [
+                "Frost Mirriam",
+                "Grass Pod",
+                "Lavender",
+                "Orange Dartwing",
+                "Red Mountain Flower",
+                "Scathecraw",
+                "Spawn Ash",
+                "White Cap"
+            ]
+        },
+        {
+            "effect": "Lingering Damage Magicka",
+            "ingredients": [
+                "Hagraven Claw",
+                "Purple Mountain Flower",
+                "Swamp Fungal Pod",
+                "Torchbug Thorax",
+                "Wheat"
+            ]
+        },
+        {
+            "effect": "Fortify Heavy Armor",
+            "ingredients": [
+                "Ice Wraith Teeth",
+                "Sabre Cat Tooth",
+                "Slaughterfish Scales",
+                "Thistle Branch",
+                "White Cap"
+            ]
+        },
+        {
+            "effect": "Lingering Damage Health",
+            "ingredients": [
+                "Imp Stool",
+                "Mora Tapinella",
+                "Orange Dartwing",
+                "Scathecraw",
+                "Slaughterfish Egg",
+                "Slaughterfish Scales"
+            ]
+        }
+    ]
 }

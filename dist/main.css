@@ -119,8 +119,18 @@ button {
 .list-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
+/* line 56, ../css/main.scss */
+.list-item.active .item {
+  font-size: 1.6em;
+  white-space: normal;
+  color: white;
+}
+/* line 62, ../css/main.scss */
+.list-item.active .item + .list-effects {
+  display: block;
+}
 
-/* line 55, ../css/main.scss */
+/* line 70, ../css/main.scss */
 .item {
   display: block;
   width: 100%;
@@ -129,24 +139,14 @@ button {
   color: #cccccc;
   white-space: nowrap;
 }
-/* line 67, ../css/main.scss */
+/* line 82, ../css/main.scss */
 .item + .list-effects {
   display: none;
   -webkit-columns: 2;
   padding: 0.3em;
 }
-/* line 72, ../css/main.scss */
+/* line 87, ../css/main.scss */
 .item + .list-effects .item-effects {
   line-height: 2em;
-  display: block;
-}
-/* line 78, ../css/main.scss */
-.item.active {
-  font-size: 1.6em;
-  white-space: normal;
-  color: white;
-}
-/* line 84, ../css/main.scss */
-.item.active + .list-effects {
   display: block;
 }
