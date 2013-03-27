@@ -128,14 +128,11 @@ label {
 .list-item {
   padding: 10px 20px;
   display: block;
+  min-width: 28em;
 }
-/* line 63, ../css/main.scss */
+/* line 64, ../css/main.scss */
 .list-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
-}
-/* line 67, ../css/main.scss */
-.list-item.active {
-  min-width: 28em;
 }
 /* line 69, ../css/main.scss */
 .list-item.active .item {

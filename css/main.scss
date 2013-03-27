@@ -59,13 +59,13 @@ label {
 .list-item {
     padding: 10px 20px;
     display: block;
+    min-width: 28em;
 
     &:hover {
         background-color: $color-black-bg;
     }
 
     &.active {
-        min-width: 28em;
         .item {
 
             font-size: 1.6em;
