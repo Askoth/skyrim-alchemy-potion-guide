@@ -26,8 +26,10 @@ function transformImage (img, w) {
     transform.blur(5);
     transform.opacity(0.6);
 
-    $('body').css({
-        backgroundImage: 'url(' + canvas.toDataURL() + ')'
-    })
+    var style = $('<style />').addClass('js-created');
+
+    style.html('body { background-image: url(' + canvas.toDataURL() + ')} ');
+
+    $('head').append(style);
 
 }
