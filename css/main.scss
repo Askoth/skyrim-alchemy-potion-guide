@@ -28,18 +28,20 @@ button {
 
 #lists-wrap {
     display: block;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
-    overflow: hidden;
     position: relative;
     background: $color-black-bg;
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
     ul {
         display: inline-block;
         vertical-align: top;
         height: 100%;
 
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
     }
 }
 

@@ -95,42 +95,43 @@ button {
 /* line 29, ../css/main.scss */
 #lists-wrap {
   display: block;
-  width: 100%;
+  min-width: 100%;
   height: 100%;
-  overflow: hidden;
   position: relative;
   background: rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
-/* line 36, ../css/main.scss */
+/* line 39, ../css/main.scss */
 #lists-wrap ul {
   display: inline-block;
   vertical-align: top;
   height: 100%;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
-/* line 46, ../css/main.scss */
+/* line 48, ../css/main.scss */
 .list-item {
   padding: 10px 20px;
   display: block;
 }
-/* line 50, ../css/main.scss */
+/* line 52, ../css/main.scss */
 .list-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 56, ../css/main.scss */
+/* line 58, ../css/main.scss */
 .list-item.active .item {
   font-size: 1.6em;
   white-space: normal;
   color: white;
 }
-/* line 62, ../css/main.scss */
+/* line 64, ../css/main.scss */
 .list-item.active .item + .list-effects {
   display: block;
 }
 
-/* line 70, ../css/main.scss */
+/* line 72, ../css/main.scss */
 .item {
   display: block;
   width: 100%;
@@ -139,13 +140,13 @@ button {
   color: #cccccc;
   white-space: nowrap;
 }
-/* line 82, ../css/main.scss */
+/* line 84, ../css/main.scss */
 .item + .list-effects {
   display: none;
   -webkit-columns: 2;
   padding: 0.3em;
 }
-/* line 87, ../css/main.scss */
+/* line 89, ../css/main.scss */
 .item + .list-effects .item-effects {
   line-height: 2em;
   display: block;
