@@ -15,6 +15,7 @@ body {
 
 body {
     background-color: $color-black;
+    background-size: cover;
 }
 
 .div-button,
@@ -75,7 +76,7 @@ button {
     }
 
     &.active {
-        
+
         font-size: 1.6em;
         white-space: normal;
         color: $color-white;

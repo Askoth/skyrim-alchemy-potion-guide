@@ -26,15 +26,15 @@ $.when(
 
     function render () {
 
-        // var output = template(listTemplate[0], {
-        //         ingredients: alchemyData.ingredients,
-        //         effects: alchemyData.effects
-        //     });
+        var output = template(listTemplate[0], {
+                ingredients: alchemyData.ingredients,
+                effects: alchemyData.effects
+            });
 
-        // console.log(alchemyData);
+        console.log(alchemyData);
 
-        // $('#lists-wrap').append($(output).clone());
-        // $('#lists-wrap').append($(output).clone());
+        $('#lists-wrap').append($(output).clone());
+        $('#lists-wrap').append($(output).clone());
     }
 
     var click = 'click';
