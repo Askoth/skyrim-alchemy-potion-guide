@@ -38,9 +38,11 @@ var MainView = Backbone.View.extend({
                         column: ulIdNum
                     });
 
-                    view.setElement($tpl)
+                    view.setElement($tpl);
+                    view.trigger('hide');
 
                     mainView.listenTo(view, 'active', mainView.closeAll)
+                    mainView.listenTo(view, 'filter', mainView.filter)
 
                 });
             }
@@ -48,5 +50,10 @@ var MainView = Backbone.View.extend({
         },
         closeAll: function (view) {
             this.trigger('closeAll', view)
+        },
+        filter: function (options) {
+            var eventName = 'show:column-' + (options.column + 1);
+
+            this.trigger(eventName, options);
         }
     });

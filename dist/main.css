@@ -86,13 +86,26 @@ body {
 /* line 22, ../css/main.scss */
 .div-button,
 button {
-  cursor: pointer;
   border: 0;
   background: none;
   text-shadow: 0.136em 0.1em 0 black;
 }
 
-/* line 29, ../css/main.scss */
+/* line 31, ../css/main.scss */
+.div-button,
+button,
+input[type=checkbox],
+label {
+  cursor: pointer;
+}
+
+/* line 35, ../css/main.scss */
+label {
+  display: block;
+  width: 14em;
+}
+
+/* line 40, ../css/main.scss */
 #lists-wrap {
   display: block;
   min-width: 100%;
@@ -103,7 +116,7 @@ button {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 39, ../css/main.scss */
+/* line 50, ../css/main.scss */
 #lists-wrap ul {
   display: inline-block;
   vertical-align: top;
@@ -111,43 +124,52 @@ button {
   overflow-y: scroll;
 }
 
-/* line 48, ../css/main.scss */
+/* line 59, ../css/main.scss */
 .list-item {
   padding: 10px 20px;
   display: block;
 }
-/* line 52, ../css/main.scss */
+/* line 63, ../css/main.scss */
 .list-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 58, ../css/main.scss */
+/* line 67, ../css/main.scss */
+.list-item.active {
+  min-width: 28em;
+}
+/* line 69, ../css/main.scss */
 .list-item.active .item {
   font-size: 1.6em;
   white-space: normal;
   color: white;
 }
-/* line 64, ../css/main.scss */
+/* line 75, ../css/main.scss */
 .list-item.active .item + .list-effects {
   display: block;
 }
 
-/* line 72, ../css/main.scss */
+/* line 83, ../css/main.scss */
 .item {
   display: block;
-  width: 100%;
   font-size: 1.3em;
   text-align: left;
   color: #cccccc;
   white-space: nowrap;
 }
-/* line 84, ../css/main.scss */
+/* line 95, ../css/main.scss */
 .item + .list-effects {
   display: none;
   -webkit-columns: 2;
   padding: 0.3em;
 }
-/* line 89, ../css/main.scss */
+/* line 100, ../css/main.scss */
 .item + .list-effects .item-effects {
   line-height: 2em;
+  display: block;
+  text-align: left;
+}
+
+/* line 108, ../css/main.scss */
+.list-result .list-effects {
   display: block;
 }

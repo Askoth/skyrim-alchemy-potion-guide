@@ -20,10 +20,21 @@ body {
 
 .div-button,
 button {
-    cursor: pointer;
     border: 0;
     background: none;
     text-shadow: 0.136em 0.1em 0 $color-black;
+}
+
+.div-button,
+button,
+input[type=checkbox],
+label {
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    width: 14em;
 }
 
 #lists-wrap {
@@ -54,7 +65,7 @@ button {
     }
 
     &.active {
-
+        min-width: 28em;
         .item {
 
             font-size: 1.6em;
@@ -71,7 +82,7 @@ button {
 
 .item {
     display: block;
-    width: 100%;
+    // width: 100%;
     font-size: 1.3em;
     text-align: left;
 
@@ -89,6 +100,11 @@ button {
         .item-effects {
             line-height: 2em;
             display: block;
+            text-align: left;
         }
     }
+}
+
+.list-result .list-effects {
+    display: block;
 }

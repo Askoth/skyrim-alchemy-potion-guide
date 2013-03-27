@@ -26,14 +26,14 @@
 </main>
 
 <script type="text/template" id="tpl-item">
-    <li class="list-item">
+    <li class="list-item" data-ingredient="<%= ingredient.name %>">
 
         <div role="button" class="div-button item"><%= ingredient.name %></div>
         <ol class="list-effects">
             <% _.each(ingredient.effects, function(effect) { %>
                 <li class="item-effects">
                     <label>
-                        <input type="checkbox" />
+                        <input type="checkbox" class="chk-item-effects" data-effect="<%= effect %>" />
                         <%= effect %>
                     </label>
                 </li>
@@ -46,9 +46,9 @@
 <script type="text/template" id="tpl-list">
     <ul id="ingredient-list-1" class="list">
     </ul>
-    <ul id="ingredient-list-2" class="list">
+    <ul id="ingredient-list-2" class="list list-result">
     </ul>
-    <ul id="ingredient-list-3" class="list">
+    <ul id="ingredient-list-3" class="list list-result">
     </ul>
 </script>
 
