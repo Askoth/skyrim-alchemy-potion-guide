@@ -6,8 +6,6 @@ var MainView = Backbone.View.extend({
             template: _.template($('#tpl-item').html())
         },
         initialize: function (options) {
-            console.log('MainView Initialized!');
-
             this.ingredientsCollection = options.ingredientsCollection;
             this.effectsCollection = options.effectsCollection;
         },
@@ -39,21 +37,44 @@ var MainView = Backbone.View.extend({
                     });
 
                     view.setElement($tpl);
+                    //hide all unused views to show things as the user navigates
                     view.trigger('hide');
 
-                    mainView.listenTo(view, 'active', mainView.closeAll)
-                    mainView.listenTo(view, 'filter', mainView.filter)
+                    mainView.listenTo(view, 'active', mainView.closeAll);
+                    mainView.listenTo(view, 'filter', mainView.filter);
+                    mainView.listenTo(view, 'column:inactivate', mainView.inactivateColumn);
 
                 });
             }
 
         },
+        inactivateColumn: function (options) {
+            this.trigger('inactivateColumn', options)
+        },
         closeAll: function (view) {
             this.trigger('closeAll', view)
         },
         filter: function (options) {
-            var eventName = 'show:column-' + (options.column + 1);
 
-            this.trigger(eventName, options);
+            if (!this.query) {
+                this.query = {};
+            }
+
+            var eventName,
+                self = this;
+
+            _.forIn(options, function (selection, column) {
+
+                if (!self.query[column] || self.query[column] && !_.isEqual(self.query[column], selection)) {
+
+                    self.query[column] = selection;
+
+                    eventName = 'show:column-' + (parseInt(column, 10) + 1);
+
+                    self.trigger(eventName, self.query);
+
+                }
+            });
+
         }
     });

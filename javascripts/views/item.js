@@ -6,8 +6,9 @@ var ItemView = Backbone.View.extend({
 
             this.$el.hide();
 
-            this.listenTo(this.mainView, 'closeAll', this.close)
-            this.listenTo(this.mainView, 'show:column-' + this.column, this.filterViews)
+            this.listenTo(this.mainView, 'inactivateColumn', this.inactivateItem);
+            this.listenTo(this.mainView, 'closeAll', this.close);
+            this.listenTo(this.mainView, 'show:column-' + this.column, this.filterViews);
 
             if (this.column > 1) {
                 this.on('hide', this.hide);
@@ -16,18 +17,7 @@ var ItemView = Backbone.View.extend({
         render: function () {
         },
         events: {
-            'click .div-button': 'openCheckboxes',
-            'click .chk-item-effects': 'filterEffects'
-        },
-        openCheckboxes: function () {
-            this.$el.addClass('active');
-            this.$el.find('[type=checkbox]').attr('checked', 'checked');
-            this.trigger('active', {
-                el: this,
-                column: this.column
-            });
-
-            this.filterEffects();
+            'click .chk-item-effects': 'activateItem'
         },
         close: function (options) {
             if (options.el != this && options.column == this.column) {
@@ -37,38 +27,78 @@ var ItemView = Backbone.View.extend({
         hide: function () {
             this.$el.hide();
         },
+        inactivateItem: function (options) {
+            if (options.el != this && options.column == this.column) {
+                this.$el.removeClass('active');
+                this.$el.find('[type=checkbox]:checked:not(:disabled)').removeAttr('checked')
+            }
+        },
+        activateItem: function () {
+
+            this.trigger('column:inactivate', {
+                column: this.column,
+                el: this
+            });
+
+            this.filterEffects();
+        },
         filterEffects: function () {
-            if (!this.$el.hasClass('active')) {
-                return;
-            };
 
             var effects = [];
 
-            this.$el.find('[type=checkbox]:checked').each(function () {
+            this.$el.find('[type=checkbox]:checked:not(:disabled)').each(function () {
                 effects.push($(this).data('effect'));
             });
 
-            this.trigger('filter', {
+            if (effects.length > 0) {
+                this.$el.addClass('active');
+            }
+
+            var query = {};
+
+            query[this.column] = {
                 ingredient: this.$el.data('ingredient'),
-                effects: effects,
-                column: this.column
-            });
+                effects: effects
+            }
+
+            this.trigger('filter', query);
 
         },
         filterViews: function (options) {
-            if (options.effects.length < 1) {
+
+
+            var shouldHide = false;
+
+            if (!options[this.column - 1] || options[this.column - 1].effects.length < 1) {
                 //no effect is matching
+                //should match effects only from the previous column
+                shouldHide = true;
+            }
+
+            var thisName = this.ingredient.name,
+                thisColumn = this.column;
+
+            _.forIn(options, function (selection, column) {
+
+                if (column < thisColumn) {
+
+
+                    if (thisName == selection.ingredient) {
+                        //same item should not show
+                        shouldHide = true;
+                    }
+                }
+
+
+            });
+
+            if (shouldHide) {
                 this.$el.hide();
                 return;
             }
 
-            if (this.ingredient.name == options.ingredient) {
-                //same item should now show
-                this.$el.hide();
-                return;
-            }
 
-            var result = _.intersection(this.ingredient.effects, options.effects);
+            var result = _.intersection(this.ingredient.effects, options[this.column - 1].effects);
 
             if (result.length > 0) {
 

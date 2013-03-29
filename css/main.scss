@@ -3,7 +3,7 @@
 
 * {
     font-family: Futura, Arial, sans-serif;
-    color: $color-white;
+    // color: $color-white;
 }
 
 html,
@@ -60,17 +60,18 @@ label {
     padding: 10px 20px;
     display: block;
     min-width: 28em;
+    color: $color-light-gray;
 
     &:hover {
         background-color: $color-black-bg;
     }
 
     &.active {
+        color: $color-white;
         .item {
 
             font-size: 1.6em;
             white-space: normal;
-            color: $color-white;
 
             + .list-effects {
                 display: block;
@@ -86,14 +87,13 @@ label {
     font-size: 1.3em;
     text-align: left;
 
-    color: $color-light-gray;
 
     white-space: nowrap;
     // text-overflow: ellipsis;
     // overflow: hidden;
 
     + .list-effects {
-        display: none;
+        // display: none;
         -webkit-columns: 2;
         padding: 0.3em;
 
