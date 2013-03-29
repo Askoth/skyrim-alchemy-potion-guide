@@ -136,6 +136,11 @@ label {
   -webkit-overflow-scrolling: touch;
 }
 /* line 67, ../css/main.scss */
+#lists-wrap h2 {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 72, ../css/main.scss */
 #lists-wrap ul {
   display: inline-block;
   vertical-align: top;
@@ -143,56 +148,56 @@ label {
   overflow-y: scroll;
 }
 
-/* line 76, ../css/main.scss */
+/* line 81, ../css/main.scss */
 .list-item {
   padding: 10px 20px;
   display: block;
   min-width: 28em;
   color: #cccccc;
 }
-/* line 82, ../css/main.scss */
+/* line 87, ../css/main.scss */
 .list-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 86, ../css/main.scss */
+/* line 91, ../css/main.scss */
 .list-item.active {
   color: white;
 }
-/* line 88, ../css/main.scss */
+/* line 93, ../css/main.scss */
 .list-item.active .item {
   font-size: 1.6em;
   white-space: normal;
 }
-/* line 93, ../css/main.scss */
+/* line 98, ../css/main.scss */
 .list-item.active .item + .list-effects {
   display: block;
 }
 
-/* line 101, ../css/main.scss */
+/* line 106, ../css/main.scss */
 .item {
   display: block;
   font-size: 1.3em;
   text-align: left;
   white-space: nowrap;
 }
-/* line 112, ../css/main.scss */
+/* line 117, ../css/main.scss */
 .item + .list-effects {
   -webkit-columns: 2;
   padding: 0.3em;
 }
-/* line 117, ../css/main.scss */
+/* line 122, ../css/main.scss */
 .item + .list-effects .item-effects {
   line-height: 2em;
   display: block;
   text-align: left;
 }
 
-/* line 125, ../css/main.scss */
+/* line 130, ../css/main.scss */
 .list-result .list-effects {
   display: block;
 }
 
-/* line 129, ../css/main.scss */
+/* line 134, ../css/main.scss */
 #result-potion {
   width: 30%;
   height: 100%;

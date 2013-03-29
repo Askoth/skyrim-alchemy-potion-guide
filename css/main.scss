@@ -64,6 +64,11 @@ label {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
 
+    h2 {
+        display: inline-block;
+        vertical-align: top;
+    }
+
     ul {
         display: inline-block;
         vertical-align: top;
