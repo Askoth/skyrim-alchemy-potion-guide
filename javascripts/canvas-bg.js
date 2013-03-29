@@ -24,7 +24,7 @@ function transformImage (img, w) {
 
     transform.crop(w.width, w.height, w.pixelRatio);
     transform.blur(5);
-    transform.opacity(0.6);
+    transform.opacity(0.4);
 
     var style = $('<style />').addClass('js-created');
 

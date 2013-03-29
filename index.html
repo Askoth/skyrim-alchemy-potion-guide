@@ -14,16 +14,11 @@
 </head>
 
 <body>
-<!--header>
-    <div class="container">
-        <h1>Skyrim Alchemy Potion Guide</h1>
-        <h2></h2>
+<header class="hidden">
+    <h1>Skyrim Alchemy Potion Guide</h1>
+</header>
 
-    </div>
-</header-->
-
-<main id="lists-wrap">
-</main>
+<main id="app-wrap"><div id="lists-wrap"></div></main>
 
 <script type="text/template" id="tpl-item">
     <li class="list-item" data-ingredient="<%= ingredient.name %>">
@@ -44,12 +39,27 @@
 </script>
 
 <script type="text/template" id="tpl-list">
+    <h2 class="hidden">Primary Ingredient</h2>
     <ul id="ingredient-list-1" class="list">
     </ul>
+    <h2 class="hidden">Secondary Ingredient</h2>
     <ul id="ingredient-list-2" class="list list-result">
     </ul>
+    <h2 class="hidden">Terciary Ingredient</h2>
     <ul id="ingredient-list-3" class="list list-result">
     </ul>
+</script>
+
+<script type="text/template" id="tpl-potion">
+    <div id="result-potion">
+        <h2>Result Potion effects</h2>
+        <h3>Desired Results</h3>
+        <ul id="results-desired">
+        </ul>
+        <h3>Collateral Results</h3>
+        <ul id="results-collateral">
+        </ul>
+    </div>
 </script>
 
 <!--div id="settings-about">
@@ -71,6 +81,7 @@
 <script src="javascripts/collections/effects.js"></script>
 <script src="javascripts/collections/ingredients.js"></script>
 <script src="javascripts/views/item.js"></script>
+<script src="javascripts/views/results.js"></script>
 <script src="javascripts/views/main.js"></script>
 <script src="javascripts/main.js"></script>
 

@@ -18,6 +18,12 @@ body {
     background-size: cover;
 }
 
+.hidden {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
 .div-button,
 button {
     border: 0;
@@ -37,12 +43,23 @@ label {
     width: 14em;
 }
 
-#lists-wrap {
+#app-wrap {
+    white-space: nowrap;
     display: block;
-    min-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#lists-wrap,
+#result-potion {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#lists-wrap {
+    width: 70%;
     height: 100%;
     position: relative;
-    background: $color-black-bg;
     white-space: nowrap;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -107,4 +124,10 @@ label {
 
 .list-result .list-effects {
     display: block;
+}
+
+#result-potion {
+    width: 30%;
+    height: 100%;
+    background: magenta;
 }

@@ -1,9 +1,15 @@
 var MainView = Backbone.View.extend({
-        el: document.getElementById('lists-wrap'),
+        el: document.getElementById('app-wrap'),
         template: _.template($('#tpl-list').html()),
         subview: {
-            view: ItemView,
-            template: _.template($('#tpl-item').html())
+            list: {
+                view: ItemView,
+                template: _.template($('#tpl-item').html())
+            },
+            results: {
+                view: ResultsView,
+                template: _.template($.trim($('#tpl-potion').html()))
+            }
         },
         initialize: function (options) {
             this.ingredientsCollection = options.ingredientsCollection;
@@ -12,25 +18,27 @@ var MainView = Backbone.View.extend({
         render: function () {
             var $html = $(this.template()),
                 collection = this.ingredientsCollection.toJSON(),
-                subview = this.subview,
+                subviewList = this.subview.list,
+                subviewResults = this.subview.results,
                 mainView = this,
 
                 $el = this.$el;
+                $listsWrap = $el.find('#lists-wrap');
 
-            $el.append($html);
+            $listsWrap.append($html);
 
-            var listsAmount = $el.find('ul').length;
+            var listsAmount = $listsWrap.find('ul').length;
 
             for (var i = 0; i < listsAmount; i++) {
 
                 _.each(collection, function (ingredient) {
 
-                    var $tpl = $(subview.template({ingredient: ingredient})),
+                    var $tpl = $(subviewList.template({ingredient: ingredient})),
                         ulIdNum = i + 1;
 
-                    $el.find('#ingredient-list-' + ulIdNum).append($tpl);
+                    $listsWrap.find('#ingredient-list-' + ulIdNum).append($tpl);
 
-                    var view = new subview.view({
+                    var view = new subviewList.view({
                         mainView: mainView,
                         ingredient: ingredient,
                         column: ulIdNum
@@ -46,6 +54,8 @@ var MainView = Backbone.View.extend({
 
                 });
             }
+
+            $el.append(subviewResults.template());
 
         },
         inactivateColumn: function (options) {

@@ -20,8 +20,6 @@ $.when(
 function App (rawData){
 	var alchemyData = rawData;
 
-    console.log(alchemyData);
-
     backgroundImage();
 
     var mainView = new MainView({
