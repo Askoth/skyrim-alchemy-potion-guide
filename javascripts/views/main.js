@@ -55,7 +55,16 @@ var MainView = Backbone.View.extend({
                 });
             }
 
-            $el.append(subviewResults.template());
+
+            var $resultTpl = $(subviewResults.template()),
+                resultView = new subviewResults.view({
+                    mainView: mainView,
+                    ingredientsCollection: this.ingredientsCollection
+                });
+
+            $el.append($resultTpl);
+
+            resultView.setElement($resultTpl);
 
         },
         inactivateColumn: function (options) {
@@ -79,6 +88,7 @@ var MainView = Backbone.View.extend({
 
                     self.query[column] = selection;
 
+                    //for ingredient views
                     eventName = 'show:column-' + (parseInt(column, 10) + 1);
 
                     self.trigger(eventName, self.query);
@@ -86,5 +96,7 @@ var MainView = Backbone.View.extend({
                 }
             });
 
+            //for result view
+            self.trigger('result:update', self.query);
         }
     });

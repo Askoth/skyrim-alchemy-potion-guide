@@ -63,12 +63,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 4, ../css/main.scss */
+/* line 5, ../css/main.scss */
 * {
   font-family: Futura, Arial, sans-serif;
 }
 
-/* line 10, ../css/main.scss */
+/* line 11, ../css/main.scss */
 html,
 body {
   width: 100%;
@@ -76,20 +76,20 @@ body {
   overflow: hidden;
 }
 
-/* line 16, ../css/main.scss */
+/* line 17, ../css/main.scss */
 body {
   background-color: black;
   background-size: cover;
 }
 
-/* line 21, ../css/main.scss */
+/* line 22, ../css/main.scss */
 .hidden {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
 }
 
-/* line 28, ../css/main.scss */
+/* line 29, ../css/main.scss */
 .div-button,
 button {
   border: 0;
@@ -97,7 +97,7 @@ button {
   text-shadow: 0.136em 0.1em 0 black;
 }
 
-/* line 37, ../css/main.scss */
+/* line 38, ../css/main.scss */
 .div-button,
 button,
 input[type=checkbox],
@@ -105,13 +105,13 @@ label {
   cursor: pointer;
 }
 
-/* line 41, ../css/main.scss */
+/* line 42, ../css/main.scss */
 label {
   display: block;
   width: 14em;
 }
 
-/* line 46, ../css/main.scss */
+/* line 47, ../css/main.scss */
 #app-wrap {
   white-space: nowrap;
   display: block;
@@ -120,13 +120,21 @@ label {
 }
 
 /* line 54, ../css/main.scss */
+.sep, #lists-wrap .list:not(#ingredient-list-1), #result-potion {
+  background: -webkit-linear-gradient(right, white 0%, white 100%), -webkit-linear-gradient(right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background-repeat: no-repeat;
+  background-size: 0.3em 100%, 0.5em 100%;
+  background-position: left top, left top;
+}
+
+/* line 67, ../css/main.scss */
 #lists-wrap,
 #result-potion {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 59, ../css/main.scss */
+/* line 72, ../css/main.scss */
 #lists-wrap {
   width: 70%;
   height: 100%;
@@ -135,71 +143,110 @@ label {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 67, ../css/main.scss */
+/* line 80, ../css/main.scss */
 #lists-wrap h2 {
   display: inline-block;
   vertical-align: top;
 }
-/* line 72, ../css/main.scss */
-#lists-wrap ul {
+/* line 85, ../css/main.scss */
+#lists-wrap .list {
   display: inline-block;
   vertical-align: top;
   height: 100%;
   overflow-y: scroll;
 }
 
-/* line 81, ../css/main.scss */
+/* line 99, ../css/main.scss */
 .list-item {
   padding: 10px 20px;
   display: block;
   min-width: 28em;
   color: #cccccc;
 }
-/* line 87, ../css/main.scss */
+/* line 105, ../css/main.scss */
 .list-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 91, ../css/main.scss */
+/* line 109, ../css/main.scss */
 .list-item.active {
   color: white;
 }
-/* line 93, ../css/main.scss */
+/* line 111, ../css/main.scss */
 .list-item.active .item {
   font-size: 1.6em;
   white-space: normal;
 }
-/* line 98, ../css/main.scss */
+/* line 116, ../css/main.scss */
 .list-item.active .item + .list-effects {
   display: block;
 }
 
-/* line 106, ../css/main.scss */
+/* line 124, ../css/main.scss */
 .item {
   display: block;
   font-size: 1.3em;
   text-align: left;
   white-space: nowrap;
 }
-/* line 117, ../css/main.scss */
+/* line 135, ../css/main.scss */
 .item + .list-effects {
   -webkit-columns: 2;
   padding: 0.3em;
 }
-/* line 122, ../css/main.scss */
+/* line 140, ../css/main.scss */
 .item + .list-effects .item-effects {
   line-height: 2em;
   display: block;
   text-align: left;
 }
 
-/* line 130, ../css/main.scss */
+/* line 148, ../css/main.scss */
 .list-result .list-effects {
   display: block;
 }
 
-/* line 134, ../css/main.scss */
+/* line 152, ../css/main.scss */
 #result-potion {
   width: 30%;
   height: 100%;
-  background: magenta;
+  color: white;
+  text-shadow: 0.136em 0.1em 0 black;
+  text-align: center;
+}
+/* line 162, ../css/main.scss */
+#result-potion h2 {
+  font-size: 1.6em;
+  color: #cccccc;
+}
+/* line 167, ../css/main.scss */
+#result-potion h3 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: #cccccc;
+}
+/* line 173, ../css/main.scss */
+#result-potion .result-list {
+  display: block;
+}
+/* line 177, ../css/main.scss */
+#result-potion .result-list-item {
+  display: block;
+  margin: 0.5em 0;
+}
+/* line 181, ../css/main.scss */
+#result-potion .result-list-item.none {
+  color: #cccccc;
+}
+
+/* line 190, ../css/main.scss */
+.table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 196, ../css/main.scss */
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
 }

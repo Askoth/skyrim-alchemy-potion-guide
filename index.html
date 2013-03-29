@@ -52,14 +52,37 @@
 
 <script type="text/template" id="tpl-potion">
     <div id="result-potion">
-        <h2>Result Potion effects</h2>
-        <h3>Desired Results</h3>
-        <ul id="results-desired">
-        </ul>
-        <h3>Collateral Results</h3>
-        <ul id="results-collateral">
-        </ul>
+        <div class="table">
+            <div class="table-cell">
+                <h2>Result Potion effects</h2>
+                <h3>Ingredients</h3>
+                <ul id="selected-ingredients" class="result-list">
+                    <li class="result-list-item none">None</li>
+                </ul>
+
+                <h3>Desired Results</h3>
+                <ul id="results-desired" class="result-list">
+                    <li class="result-list-item none">None</li>
+                </ul>
+
+                <h3>Collateral Results</h3>
+                <ul id="results-collateral" class="result-list">
+                    <li class="result-list-item none">None</li>
+                </ul>
+            </div>
+        </div>
     </div>
+</script>
+
+<script type="text/template" id="tpl-potion-item">
+
+    <% if (result.length < 1) {
+        result.push('None')
+    } %>
+
+    <% _.each(result, function (item) { %>
+        <li class="result-list-item <% if (item == 'None') {%>none<% } %>"><%= item %></li>
+    <% }) %>
 </script>
 
 <!--div id="settings-about">

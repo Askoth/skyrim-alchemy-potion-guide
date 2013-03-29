@@ -1,5 +1,6 @@
 @import "compass/reset";
 @import "colors.scss";
+@import "mixins.scss";
 
 * {
     font-family: Futura, Arial, sans-serif;
@@ -50,6 +51,18 @@ label {
     height: 100%;
 }
 
+.sep {
+
+    // $g1: @include gradient($color-white, $color-white);
+    // $g2: @include gradient($color-black, $color-black);
+
+    // background: $g1, $g2;
+    background: -webkit-linear-gradient(right, $color-white 0%, $color-white 100%), -webkit-linear-gradient(right, $color-black-bg 0%, $color-black-bg 100%);
+    background-repeat: no-repeat;
+    background-size: 0.3em 100%, 0.5em 100%;
+    background-position: left top, left top;
+}
+
 #lists-wrap,
 #result-potion {
     display: inline-block;
@@ -69,13 +82,18 @@ label {
         vertical-align: top;
     }
 
-    ul {
+    .list {
         display: inline-block;
         vertical-align: top;
         height: 100%;
 
         overflow-y: scroll;
+
+        &:not(#ingredient-list-1) {
+            @extend .sep;
+        }
     }
+
 }
 
 .list-item {
@@ -134,5 +152,48 @@ label {
 #result-potion {
     width: 30%;
     height: 100%;
-    background: magenta;
+
+    @extend .sep;
+
+    color: $color-white;
+    text-shadow: 0.136em 0.1em 0 $color-black;
+    text-align: center;
+
+    h2 {
+        font-size: 1.6em;
+        color: $color-light-gray;
+    }
+
+    h3 {
+        font-size: 1.4em;
+        margin: 10px 0;
+        color: $color-light-gray;
+    }
+
+    .result-list {
+        display: block;
+    }
+
+    .result-list-item {
+        display: block;
+        margin: 0.5em 0;
+
+        &.none {
+            color: $color-light-gray;
+        }
+    }
+
+
+
+}
+
+.table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
 }
